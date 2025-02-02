@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama 安裝指南</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="https://ollama.com">
+            <img src="ollama-logo.png" alt="Ollama Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#requirements">系統需求</a></li>
+                <li><a href="#installation">安裝步驟</a></li>
+                <li><a href="#usage">基本使用</a></li>
+                <li><a href="#help">獲取幫助</a></li>
+                <li><a href="#experience">安裝經驗</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Ollama 安裝指南</h1>
+
+        <h2 id="requirements">1. 系統需求</h2>
+        <ul>
+            <li>作業系統：Windows 10 或更高版本，macOS，或 Linux</li>
+            <li>至少 4GB 的 RAM</li>
+            <li>具備網際網路連接</li>
+        </ul>
+
+        <h2 id="installation">2. 安裝步驟</h2>
+        <h3>Windows</h3>
+        <ol>
+            <li>前往 <a href="https://ollama.com">Ollama 官方網站</a> 下載最新的 Windows 安裝程式。</li>
+            <li>雙擊下載的安裝程式，並按照螢幕上的指示完成安裝。</li>
+        </ol>
+
+        <h3>macOS</h3>
+        <ol>
+            <li>打開終端機，執行以下命令：
+                <pre><code>brew install ollama/tap/ollama</code></pre>
+            </li>
+            <li>執行以下命令確認安裝成功：
+                <pre><code>ollama --version</code></pre>
+            </li>
+        </ol>
+
+        <h3>Linux</h3>
+        <ol>
+            <li>根據您的發行版，使用相應的包管理器安裝 Ollama。</li>
+            <li>執行以下命令確認安裝成功：
+                <pre><code>ollama --version</code></pre>
+            </li>
+        </ol>
+
+        <h2 id="usage">3. 基本使用</h2>
+        <p>安裝完成後，您可以使用以下命令來啟動 Ollama：</p>
+        <pre><code>ollama start</code></pre>
+
+        <h2 id="experience">4. 安裝經驗</h2>
+        <p>以下是我在安裝 Ollama 時的經驗：</p>
+        <pre><code>@echo off
+
+REM 之後，停止 Ollama 服務，強制終止 ollama.exe 進程，並等待 2 秒以確保服務已完全停止
+taskkill /F /IM ollama.exe 2>nul
+timeout /t 5 /nobreak >nul
+
+REM 首先，關閉命令行輸出，以免在執行過程中顯示命令的輸出信息
+set "CUDA_PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8"
+set "CUDA_HOME=%CUDA_PATH%"
+
+REM 接著，進行 CUDA 運行時的設置，將 CUDA 的二進制文件路徑和庫路徑添加到系統的 PATH 變量中
+set "PATH=%CUDA_PATH%\bin;%CUDA_PATH%\lib\x64;%PATH%"
+
+REM 然後，進行 Ollama 的 CUDA 設置，包括設定可見的 CUDA 設備、啟用 CUDA、指定設備類型、設定 GPU 層數和 GPU 開銷
+set "CUDA_VISIBLE_DEVICES=0"
+REM 啟用 CUDA 加速
+set "OLLAMA_CUDA=1" 
+REM 指定使用 CUDA 設備進行運算
+set "OLLAMA_DEVICE=cuda"
+REM 設置 GPU 層數，影響模型的計算效率和精度
+set "OLLAMA_GPU_LAYERS=35"
+REM 設置 GPU 開銷，影響模型的計算效率和精度 
+set "OLLAMA_GPU_OVERHEAD=1" 
+set "OLLAMA_HOST=http://127.0.0.1:11435"
+
+REM 再者，設置 Ollama 使用的 CUDA 版本
+set "OLLAMA_CUDA=11.8"
+
+REM 最後，啟動 Ollama 服務
+ollama serve
+</code></pre>
+
+        <h2 id="help">5. 獲取幫助</h2>
+        <p>如需更多幫助，您可以使用以下命令查看 Ollama 的使用說明：</p>
+        <pre><code>ollama help</code></pre>
+    </main>
+
+    <footer>
+        <p>如需更多幫助，請聯繫：</p>
+        <ul>
+            <li>客服信箱：support@ollama.com</li>
+            <li>官方網站：<a href="https://ollama.com">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
