@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crystal Flow AI 媒體分析器使用手冊</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="alternate" href="index_en.html" hreflang="en" title="Crystal Flow AI Media Analyzer User Manual">
+    </head>
+    <!-- 選擇結束 -->
+    <body>
+        <header>
+            <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">
+                <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 10%; height: auto; display: block; margin: 0 auto;">
+            </a>
+            <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+                <a href="#overview">概述</a>
+                <a href="#requirements">系統需求</a>
+                <a href="#features">功能特色</a>
+                <a href="#guide">使用指南</a>
+                <a href="#faq">常見問題</a>
+                <a href="Installation_menu_en.html">英文版</a>
+            </nav>
+        </header>
+
+    <main>
+        <h1>Crystal Flow AI 媒體分析器使用手冊</h1>
+
+        <h2 id="overview">1. 概述</h2>
+        <p>Crystal Flow AI 媒體分析器是一款智能多媒體數據分析工具。它支援處理各種格式的數位內容，包括 YouTube 影片、音訊檔案、文件（TXT、PDF、PPT、EXL、Word 等），並透過心智圖、文字稿和雙語翻譯幫助用戶高效分析和管理資訊。</p>
+
+        <h2 id="requirements">2. 系統需求</h2>
+        <ul>
+            <li>作業系統：Windows 10 或更高版本</li>
+            <li>硬體需求：
+                <ul>
+                    <li>最低配置：雙核心 CPU、4GB RAM</li>
+                    <li>建議配置：四核心 CPU、8GB RAM、NVIDIA GPU（支援 CUDA，選配）</li>
+                </ul>
+            </li>
+            <li>必要軟體：
+                <ul>
+                    <li><a href="node-install-guide.html">Node.js 安裝指南</a></li>
+                    <li>Markdown 檔案閱讀器：VSCode 或瀏覽器外掛（Chrome、Microsoft Edge）</li>
+                    <li>ffmpeg：開源外掛，程式會自動下載</li>
+                    <li><a href="openai-api-key-guide.html">OpenAI API Key 指南</a></li>
+                    <li><a href="openrouter-api-key-guide.html">OpenRouter API Key 指南</a></li>
+                    <li><a href="lmstudio-guide.html">LM Studio 安裝指南</a></li>
+                    <li><a href="ollama-install-guide.html">Ollama 安裝指南</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 id="features">3. 功能特色</h2>
+        <h3>a. 雙重使用者介面支援</h3>
+        <ul>
+            <li><strong>Windows 使用者介面</strong>
+                <ul>
+                    <li>提供完整的多媒體分析功能，專為處理 PC 上的多媒體資訊設計。</li>
+                    <li>支援處理音訊、影片、文件和心智圖生成。</li>
+                </ul>
+            </li>
+            <li><strong>網頁介面</strong>
+                <ul>
+                    <li>支援透過 QR Code 掃描從行動裝置快速上傳資料至 PC。</li>
+                    <li>使用者可直接在行動裝置上查看進度，並與 PC 工具無縫協作。</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>b. 線上多媒體知識分析</h3>
+        <ul>
+            <li>支援多種來源和格式
+                <ul>
+                    <li>YouTube：自動處理公開或私人影片內容，提取字幕進行分析。
+                        <ul>
+                            <li>使用案例：學術課程筆記、技術示範摘要。</li>
+                        </ul>
+                    </li>
+                    <li>Facebook 影片：處理分享連結，將影片內容轉換為視覺化資料。
+                        <ul>
+                            <li>使用案例：會議記錄、品牌廣告分析。</li>
+                        </ul>
+                    </li>
+                    <li>任何 URL：支援解析數位文章（新聞、電子報、維基百科）。
+                        <ul>
+                            <li>使用案例：研究核心內容提取。</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>影片字幕下載和翻譯
+                <ul>
+                    <li>自動從 YouTube 和 Facebook 提取字幕。</li>
+                    <li>提供多語言翻譯，匯出為 TXT 和 Markdown（MD）檔案。</li>
+                    <li>可生成 HTML 格式心智圖供瀏覽器檢視。</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>c. 文字和圖像處理</h3>
+        <ul>
+            <li>文字處理
+                <ul>
+                    <li>支援從 PDF、PPT、Word 和 Excel 檔案提取內容，轉換為 Markdown 格式。
+                        <ul>
+                            <li>使用案例：學術研究整理、商業報告準備。</li>
+                        </ul>
+                    </li>
+                    <li>準確保留表格、段落和標題版面配置。</li>
+                    <li>使用者可直接生成心智圖或進行多語言翻譯。</li>
+                </ul>
+            </li>
+            <li>圖像處理
+                <ul>
+                    <li>支援 jpg、jpeg、png、bmp、heic、webp 格式。</li>
+                    <li>從圖像或掃描文件提取文字，轉換為 Markdown 格式。
+                        <ul>
+                            <li>使用案例：手寫筆記數位化、圖像文字分析。</li>
+                        </ul>
+                    </li>
+                    <li>整合 Google Lens/Microsoft Lens 實現快速掃描和文字轉換。</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>d. 本地音訊和 MP3 音樂處理</h3>
+        <ul>
+            <li>支援 MP3、M4A、ACC 和 WAV 格式。</li>
+            <li>提取歌詞並提供雙語翻譯。
+                <ul>
+                    <li>使用案例：歌曲翻譯學習、音樂資料整理。</li>
+                </ul>
+            </li>
+            <li>使用語音轉文字技術生成 Markdown 格式文字稿。</li>
+            <li>可從文字稿或歌詞結構創建心智圖。</li>
+        </ul>
+
+        <h3>e. PC 錄音功能</h3>
+        <ul>
+            <li>即時音訊錄製和處理，支援自動生成文字稿。
+                <ul>
+                    <li>使用案例：會議錄音分析、演講文字稿生成。</li>
+                </ul>
+            </li>
+            <li>可自訂錄音時長、背景錄音和時間戳記標記。</li>
+        </ul>
+
+        <h3>f. 心智圖生成</h3>
+        <ul>
+            <li>可自訂深度層級和結構化呈現。
+                <ul>
+                    <li>使用案例：學術研究、會議記錄、創意思考。</li>
+                </ul>
+            </li>
+            <li>結合 GPT 分析並支援多語言。</li>
+        </ul>
+
+        <h3>g. 雙語翻譯和文字轉語音</h3>
+        <ul>
+            <li>支援多語言翻譯和雙語並列輸出。
+                <ul>
+                    <li>使用案例：國際會議資料準備、多語言學習輔助。</li>
+                </ul>
+            </li>
+            <li>提供文字轉語音功能，可調整速度、音調和聲音風格。</li>
+            <li>匯出為 Markdown、TXT 或 PDF 檔案。</li>
+        </ul>
+
+        <h2 id="guide">5. 使用指南</h2>
+        <h3>初始設定</h3>
+        <ul>
+            <li>啟動軟體後輸入有效的 OpenAI API Key。</li>
+            <li>確保已安裝 NVIDIA 驅動程式（如果啟用 GPU 加速）。</li>
+            <li>在 Google Sheets 註冊電子郵件以啟用試用期。</li>
+        </ul>
+
+        <h3>核心功能使用</h3>
+        <ul>
+            <li>分析 YouTube 或 URL：將影片連結貼入「輸入媒體 URL」欄位。</li>
+            <li>選擇要下載的字幕語言。</li>
+            <li>點擊「分析文字」按鈕。</li>
+        </ul>
+
+        <h3>心智圖生成</h3>
+        <ul>
+            <li>選擇心智圖深度層級。</li>
+            <li>點擊「分析文字」，生成的心智圖會自動儲存。</li>
+        </ul>
+
+        <h3>錄音和文字稿生成</h3>
+        <ul>
+            <li>點擊錄音按鈕開始錄音。</li>
+            <li>錄音完成後自動生成文字稿。</li>
+        </ul>
+
+        <h2>6. 進階功能</h2>
+        <ul>
+            <li>多語言解析和翻譯支援。</li>
+            <li>動態分段處理和 token 數量調整。</li>
+            <li>與 GPT-4o-mini 互動。</li>
+        </ul>
+
+        <h2>7. 授權和試用期</h2>
+        <h3>試用流程</h3>
+        <ul>
+            <li>發送電子郵件至 henrytalk.techpro@gmail.com 申請試用。</li>
+            <li>從回覆郵件中獲取試用註冊碼。</li>
+            <li>在登入欄位輸入試用帳號和註冊碼開始試用。</li>
+        </ul>
+
+        <h3>授權模式</h3>
+        <ul>
+            <li>免費試用：30 天內無功能限制。</li>
+            <li>完整授權：購買後終身使用權。</li>
+        </ul>
+
+        <h2 id="faq">8. 常見問題（FAQ）</h2>
+        <ol>
+            <li>按鈕無法點擊？
+                <ul>
+                    <li>檢查電子郵件是否已註冊並授權。</li>
+                </ul>
+            </li>
+            <li>心智圖太簡單？
+                <ul>
+                    <li>減少 token 數量或增加深度層級。</li>
+                </ul>
+            </li>
+            <li>錄音功能無法使用？
+                <ul>
+                    <li>檢查麥克風連接和系統設定。</li>
+                </ul>
+            </li>
+            <li>如何匯出結果？
+                <ul>
+                    <li>使用 Markdown 編輯器或擴充功能檢視生成的檔案。</li>
+                </ul>
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+        <p>如需更多協助，請聯繫：</p>
+        <ul>
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">造訪我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本設定 - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index.html">返回使用手冊</a>
+            <a href="chapter1-basic-settings_en.html">English Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>第一章：基本設定</h1>
+
+        <div class="chapter-navigation">
+            <p>章節導航：</p>
+            <a href="chapter1-basic-settings.html">第1章：基本設定</a> |
+            <a href="chapter2-operation-guide.html">第2章：操作流程指南</a> |
+            <a href="chapter3-ai-models.html">第3章：AI模型設定</a>
+        </div>
+
+        <div class="content-section">
+            <h2>1.1 介面設定</h2>
+            <div class="image-section">
+                <img src="./images/gui-settings.png" alt="GUI設定截圖">
+                <p>圖1-1：使用者設定介面</p>
+            </div>
+            <div class="card-section">
+                <ul>
+                    <li>GUI 顯示設定（四種組合可選）：選擇介面主題後，重新啟動軟體以生效
+                        <ul>
+                            <li>English/Dark：英文介面搭配深色主題
+                                <ul>
+                                    <li>適合習慣英文操作的使用者</li>
+                                    <li>深色主題降低眼睛疲勞</li>
+                                    <li>建議在光線較暗環境使用</li>
+                                </ul>
+                            </li>
+                            <li>English/Light：英文介面搭配淺色主題
+                                <ul>
+                                    <li>適合在日光環境下使用</li>
+                                    <li>提供最佳文字閱讀對比度</li>
+                                    <li>建議一般辦公環境使用</li>
+                                </ul>
+                            </li>
+                            <li>中文/Dark：中文介面搭配深色主題
+                                <ul>
+                                    <li>適合中文使用者夜間操作</li>
+                                    <li>降低螢幕亮度對眼睛的刺激</li>
+                                    <li>提供舒適的中文閱讀體驗</li>
+                                </ul>
+                            </li>
+                            <li>中文/Light：中文介面搭配淺色主題
+                                <ul>
+                                    <li>最接近傳統文件處理外觀</li>
+                                    <li>適合長時間文字處理工作</li>
+                                    <li>建議一般日常使用</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="image-section">
+                <img src="./images/gui-comparison.png" alt="四種介面模式對比">
+                <p>圖1-2：四種介面模式對比</p>
+            </div>
+
+            <h2>1.2 功能設定區塊</h2>
+            <div class="image-section">
+                <img src="./images/function-settings.png" alt="功能設定區域截圖">
+                <p>圖1-3：功能設定區域</p>
+            </div>
+            <div class="card-section">
+                <ul>
+                    <li>上方功能列：
+                        <ul>
+                            <li>心智圖層級選擇：預設 3 layers
+                                <ul>
+                                    <li>提供3層級和4層級兩種選擇</li>
+                                    <li>3層級提供<b>主題、重點和細節</b>三個層級</li>
+                                    <li>4層級比3層級多了<b>原文摘錄</b></li>
+                                    <li>建議根據文件複雜度進行調整，3層級適合一般文章，4層級適合學術論文，注意4層級需要更高的計算資源</li>
+                                </ul>
+                            </li>
+                            <li>AI 模型選擇：
+                                <ul>
+                                    <li>gpt-4o/gpt-4o-mini：OpenAI 的 GPT-4 系列模型</li>
+                                    <li>openrouter：支援多種 雲端 AI 模型, 如deepseek, claude, gemini, etc.</li>
+                                    <li>lm Studio：支援多種本地 AI 模型, 如deepseek, Llama, Gemini, etc.</li>
+                                    <li>注意：lm Studio 需要先安裝本地模型，並在 lm Studio 中設定模型路徑。請參考 <a href="lmstudio-guide.html">lm Studio 使用指南</a>。</li>
+                                </ul>
+                            </li>
+                            <li>文字區塊大小：預設 768 ( 單位 tokens)
+                                <ul>
+                                    <li>根據處理需求進行調整，數值越大，單次處理的文字量越多，心智圖分析結果會更具備全局觀，但可能會忽略細節。</li>
+                                    <li>反之，數值越小，內容分析會更加精細，但心智圖分析結果可能較缺乏全局觀。</li>
+                                    <li>建議：如果需要全局觀的總結 (2048)，應選擇較大的數值；如果需要細讀文章 (512)，應選擇較小的數值。</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>1.3 媒體輸入設定</h2>
+            <div class="image-section">
+                <img src="./images/media-input.png" alt="媒體輸入設定">
+                <p>圖1-4：媒體輸入設定</p>
+            </div>
+            <div class="card-section">
+                <ul>
+                    <li>URL 輸入欄位：
+                        <ul>
+                            <li>支援 YouTube、Facebook 等影片連結</li>
+                            <li>支援一般網頁文章連結, 如維基百科、新聞網站、部落格等</li>
+                        </ul>
+                    </li>
+                    <li>功能切換選項：
+                        <ul>
+                            <li>Language selection:<br>選擇資料處理輸出語言, 目前支援 中文, 英文, 日文, 韓文, 法文, 德文, 以及 <br>original( 原始語言,不做語言轉換 )</li>
+                            <li>Download Subtitles：<br>選擇使用影片原始字幕，取消的話會使用Whipser語言模型進行語音辨識。</li>
+                            <li>Lyrics Mode：<br>歌詞處理模式，選擇後會使用Whisper進行語音辨識，並將辨識結果轉換為歌詞。</li>
+                            <li>Bilingual Support：<br>雙語支援，選擇後會使用Whisper進行語音辨識，並將辨識結果轉換為雙語歌詞或雙語心智圖。</li>
+                            <li>Transcription Mode：<br>將文字內容進行文法段落及標點符號的整理，如果有表格，會轉換成Markdown表格。</li>
+                            <li>SRT Mode：<br>字幕檔處理模式，選擇後會使用Whisper進行語音辨識，並將辨識結果加上時間戳記轉換為SRT字幕檔。</li>
+                            <li>Whisper API：<br>使用OpenAI的雲端Whisper API進行語音辨識，需要先設定OpenAI API Key，如果電腦沒有足夠資源跑本地語音轉文字模型，可以選擇使用雲端模型。</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>如需更多協助，請聯繫：</p>
+        <ul>
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

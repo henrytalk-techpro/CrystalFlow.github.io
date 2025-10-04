@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama Installation Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 10%; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="#requirements">System Requirements</a>
+            <a href="#installation">Installation Steps</a>
+            <a href="#usage">Basic Usage</a>
+            <a href="#help">Get Help</a>
+            <a href="#experience">Installation Experience</a>
+            <a href="ollama-install-guide.html">Chinese Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Ollama Installation Guide</h1>
+
+        <h2 id="requirements">1. System Requirements</h2>
+        <ul>
+            <li>Operating System: Windows 10 or higher, macOS, or Linux</li>
+            <li>At least 4GB of RAM</li>
+            <li>Internet connection required</li>
+        </ul>
+
+        <h2 id="installation">2. Installation Steps</h2>
+        <h3>Windows</h3>
+        <ol>
+            <li>Go to the <a href="https://ollama.com">Ollama official website</a> to download the latest Windows installer.</li>
+            <li>Double-click the downloaded installer and follow the on-screen instructions to complete the installation.</li>
+        </ol>
+
+        <h3>macOS</h3>
+        <ol>
+            <li>Open the terminal and execute the following command:
+                <pre><code>brew install ollama/tap/ollama</code></pre>
+            </li>
+            <li>Run the following command to confirm the installation was successful:
+                <pre><code>ollama --version</code></pre>
+            </li>
+        </ol>
+
+        <h3>Linux</h3>
+        <ol>
+            <li>Install Ollama using the appropriate package manager for your distribution.</li>
+            <li>Run the following command to confirm the installation was successful:
+                <pre><code>ollama --version</code></pre>
+            </li>
+        </ol>
+
+        <h2 id="usage">3. Basic Usage</h2>
+        <p>After installation, you can use the following command to start Ollama:</p>
+        <pre><code>ollama start</code></pre>
+
+        <h2 id="experience">4. Installation Experience</h2>
+        <p>Here is my experience while installing Ollama:</p>
+        <pre><code>@echo off
+
+REM First, stop the Ollama service, forcefully terminate the ollama.exe process, and wait 2 seconds to ensure the service has completely stopped
+taskkill /F /IM ollama.exe 2>nul
+timeout /t 5 /nobreak >nul
+
+REM First, close the command line output to avoid displaying command output information during execution
+set "CUDA_PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8"
+set "CUDA_HOME=%CUDA_PATH%"
+
+REM Next, set up the CUDA runtime by adding the binary and library paths of CUDA to the system PATH variable
+set "PATH=%CUDA_PATH%\bin;%CUDA_PATH%\lib\x64;%PATH%"
+
+REM Then, configure Ollama's CUDA settings, including setting visible CUDA devices, enabling CUDA, specifying device type, setting GPU layers, and GPU overhead
+set "CUDA_VISIBLE_DEVICES=0"
+REM Enable CUDA acceleration
+set "OLLAMA_CUDA=1" 
+REM Specify using CUDA devices for computation
+set "OLLAMA_DEVICE=cuda"
+REM Set GPU layers, affecting the model's computational efficiency and accuracy
+set "OLLAMA_GPU_LAYERS=35"
+REM Set GPU overhead, affecting the model's computational efficiency and accuracy 
+set "OLLAMA_GPU_OVERHEAD=1" 
+set "OLLAMA_HOST=http://127.0.0.1:11434"
+
+REM Additionally, set the CUDA version used by Ollama
+set "OLLAMA_CUDA=11.8"
+
+REM Finally, start the Ollama service
+ollama serve
+</code></pre>
+
+        <h2 id="help">5. Get Help</h2>
+        <p>If you need more help, you can use the following command to view Ollama's usage instructions:</p>
+        <pre><code>ollama help</code></pre>
+    </main>
+
+    <footer>
+        <p>If you need more help, please contact:</p>
+        <ul>
+            <li>Customer Service Email: support@ollama.com</li>
+            <li>Official Website: <a href="https://ollama.com">Visit us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>檔案格式支援 - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index.html">返回使用手冊</a>
+            <a href="chapter5-file-formats_en.html">English Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>第五章：檔案格式支援</h1>
+
+        <div class="chapter-navigation">
+            <p>章節導航：</p>
+            <a href="chapter4-whisper.html">第4章：Whisper設定</a> |
+            <a href="chapter5-file-formats.html">第5章：檔案格式支援</a> |
+            <a href="chapter6-audio-processing.html">第6章：音訊處理功能</a>
+        </div>
+
+        <div class="content-section">
+            <h2>5.1 圖片格式支援</h2>
+            <div class="card-section">
+                <div class="image-section">
+                    <img src="./images/image-formats.png" alt="支援的圖片格式">
+                    <p>圖5-1：支援的圖片格式示例</p>
+                </div>
+
+                <div class="grid-2-columns">
+                    <div class="card-section">
+                        <h3>標準圖片格式</h3>
+                        <div class="image-section">
+                            <img src="./images/standard-image-formats.png" alt="標準圖片格式示例">
+                        </div>
+                        <ul>
+                            <li>JPG/JPEG
+                                <ul>
+                                    <li>最常見的圖片格式</li>
+                                    <li>適合照片和複雜圖像</li>
+                                    <li>支援各種解析度</li>
+                                </ul>
+                            </li>
+                            <li>PNG
+                                <ul>
+                                    <li>支援透明背景</li>
+                                    <li>適合截圖和文字圖片</li>
+                                    <li>無損壓縮格式</li>
+                                </ul>
+                            </li>
+                            <li>BMP
+                                <ul>
+                                    <li>無壓縮格式</li>
+                                    <li>完整保留原始圖像質量</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-section">
+                        <h3>特殊圖片格式</h3>
+                        <div class="image-section">
+                            <img src="./images/special-image-formats.png" alt="特殊圖片格式示例">
+                        </div>
+                        <ul>
+                            <li>HEIC/HEIF
+                                <ul>
+                                    <li>iOS 設備常用格式</li>
+                                    <li>自動轉換為 JPG 處理</li>
+                                    <li>保持原始圖像品質</li>
+                                </ul>
+                            </li>
+                            <li>WebP
+                                <ul>
+                                    <li>Google 開發的現代圖片格式</li>
+                                    <li>支援動態圖片</li>
+                                    <li>較高的壓縮效率</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>5.2 文件格式支援</h2>
+            <div class="card-section">
+                <div class="image-section">
+                    <img src="./images/document-formats.png" alt="支援的文件格式">
+                    <p>圖5-2：支援的文件格式總覽</p>
+                </div>
+
+                <h3>文書處理檔案</h3>
+                <ul>
+                    <li>PDF
+                        <ul>
+                            <li>支援多頁文件</li>
+                            <li>可選擇頁面範圍處理</li>
+                            <li>支援文字和圖片混合內容</li>
+                            <li>可處理掃描文件</li>
+                        </ul>
+                    </li>
+                    <li>Microsoft Office 格式
+                        <ul>
+                            <li>Word (.doc, .docx)
+                                <ul>
+                                    <li>完整文字格式支援</li>
+                                    <li>保留段落結構</li>
+                                    <li>支援表格轉換</li>
+                                </ul>
+                            </li>
+                            <li>PowerPoint (.ppt, .pptx)
+                                <ul>
+                                    <li>支援投影片內容提取</li>
+                                    <li>保留簡報結構</li>
+                                    <li>可處理內嵌圖片</li>
+                                </ul>
+                            </li>
+                            <li>Excel (.xls, .xlsx)
+                                <ul>
+                                    <li>表格資料處理</li>
+                                    <li>多工作表支援</li>
+                                    <li>數據格式保留</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h3>純文字檔案</h3>
+                <ul>
+                    <li>TXT
+                        <ul>
+                            <li>支援多種編碼（UTF-8, Big5等）</li>
+                            <li>自動編碼識別</li>
+                            <li>適合大量文字處理</li>
+                        </ul>
+                    </li>
+                    <li>Markdown (.md)
+                        <ul>
+                            <li>保留格式標記</li>
+                            <li>支援轉換為其他格式</li>
+                            <li>適合技術文檔</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>5.3 處理建議</h2>
+            <div class="card-section">
+                <div class="image-section">
+                    <img src="./images/processing-tips.png" alt="處理建議示意圖">
+                    <p>圖5-3：檔案處理建議</p>
+                </div>
+
+                <div class="tips-section">
+                    <h3>圖片處理建議</h3>
+                    <ul>
+                        <li>圖片大小：建議不超過 10MB</li>
+                        <li>解析度：建議 300-1200 DPI</li>
+                        <li>文字圖片：確保文字清晰可辨</li>
+                    </ul>
+
+                    <h3>文件處理建議</h3>
+                    <ul>
+                        <li>PDF 文件：
+                            <ul>
+                                <li>建議先確認是否為文字型 PDF</li>
+                                <li>掃描文件建議確保掃描品質</li>
+                                <li>可選擇性處理頁面範圍</li>
+                            </ul>
+                        </li>
+                        <li>Office 文件：
+                            <ul>
+                                <li>建議使用較新版本格式</li>
+                                <li>確保文件未加密</li>
+                                <li>複雜格式可能需要預處理</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>5.4 批次處理功能</h2>
+            <div class="card-section">
+                <div class="image-section">
+                    <img src="./images/batch-processing.png" alt="批次處理介面">
+                    <p>圖5-4：批次處理功能介面</p>
+                </div>
+
+                <h3>支援功能</h3>
+                <ul>
+                    <li>多檔案同時處理</li>
+                    <li>自動格式識別</li>
+                    <li>統一輸出設定</li>
+                </ul>
+
+                <h3>使用建議</h3>
+                <ul>
+                    <li>建議按檔案類型分類處理</li>
+                    <li>大量檔案建議分批進行</li>
+                    <li>注意檢查輸出結果</li>
+                </ul>
+
+                <div class="image-section">
+                    <img src="./images/batch-example.png" alt="批次處理示例">
+                    <p>圖5-5：批次處理實際應用示例</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>如需更多協助，請聯繫：</p>
+        <ul>
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

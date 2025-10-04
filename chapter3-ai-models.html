@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 模型設定與選擇 - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index.html">返回使用手冊</a>
+            <a href="chapter3-ai-models_en.html">English Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>第三章：AI 模型設定與選擇</h1>
+
+        <div class="chapter-navigation">
+            <p>章節導航：</p>
+            <a href="chapter2-operation-guide.html">第2章：操作流程指南</a> |
+            <a href="chapter3-ai-models.html">第3章：AI模型設定</a> |
+            <a href="chapter4-whisper.html">第4章：Whisper設定</a>
+        </div>
+
+        <div class="content-section">
+            <h2>3.1 支援的 AI 模型類型</h2>
+            <div class="image-section">
+                <img src="./images/ai-models-overview.png" alt="AI模型總覽">
+                <p>圖3-1：支援的AI模型總覽</p>
+            </div>
+
+            <h3>OpenRouter 模型</h3>
+            <div class="model-section">
+                <h4>Google Gemini 系列</h4>
+                <div class="image-section">
+                    <img src="./images/gemini-models.png" alt="Gemini模型設定介面">
+                    <p>圖3-2：Gemini模型設定介面</p>
+                </div>
+                <ul>
+                    <li>gemini-2.0-flash-lite-001
+                        <ul>
+                            <li>輕量快速版本</li>
+                            <li>適合一般文本處理</li>
+                            <li>回應速度快</li>
+                        </ul>
+                    </li>
+                    <li>gemini-2.0-flash-001
+                        <ul>
+                            <li>標準版本</li>
+                            <li>平衡效能與準確度</li>
+                        </ul>
+                    </li>
+                    <li>gemini-flash-1.5
+                        <ul>
+                            <li>1.5 版本</li>
+                            <li>穩定性高</li>
+                        </ul>
+                    </li>
+                    <li>gemini-flash-1.5-8b
+                        <ul>
+                            <li>8B 參數版本</li>
+                            <li>適合輕量化應用</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>OpenAI 系列</h4>
+                <div class="image-section">
+                    <img src="./images/openai-models.png" alt="OpenAI模型設定介面">
+                    <p>圖3-3：OpenAI模型設定介面</p>
+                </div>
+                <ul>
+                    <li>gpt-4o-mini
+                        <ul>
+                            <li>GPT-4 輕量版</li>
+                            <li>適合一般對話和文本分析</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Deepseek 系列</h4>
+                <div class="image-section">
+                    <img src="./images/deepseek-models.png" alt="Deepseek模型設定介面">
+                    <p>圖3-4：Deepseek模型設定介面</p>
+                </div>
+                <ul>
+                    <li>deepseek-r1:free
+                        <ul>
+                            <li>免費版本</li>
+                            <li>適合一般使用</li>
+                        </ul>
+                    </li>
+                    <li>deepseek-chat:free
+                        <ul>
+                            <li>聊天專用版本</li>
+                            <li>對話體驗優化</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>LM Studio 本地模型</h3>
+            <div class="model-section">
+                <div class="image-section">
+                    <img src="./images/lmstudio-models.png" alt="LM Studio模型設定介面">
+                    <p>圖3-5：LM Studio模型設定介面</p>
+                </div>
+                <h4>視覺語言模型</h4>
+                <ul>
+                    <li>llava-llama-3-8b-v1_1
+                        <ul>
+                            <li>支援圖像理解</li>
+                            <li>適合圖文混合處理</li>
+                        </ul>
+                    </li>
+                    <li>llava-v1.5-7b
+                        <ul>
+                            <li>升級版視覺模型</li>
+                            <li>更好的圖像理解能力</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>專業模型</h4>
+                <ul>
+                    <li>glm-4-9b-chat-abliterated
+                        <ul>
+                            <li>通用對話模型</li>
+                            <li>適合各種場景</li>
+                        </ul>
+                    </li>
+                    <li>deepseek-coder-v2-lite-instruct
+                        <ul>
+                            <li>程式碼處理專用</li>
+                            <li>適合技術文檔處理</li>
+                        </ul>
+                    </li>
+                    <li>deepseek-r1-distill-qwen-7b
+                        <ul>
+                            <li>知識蒸餾版本</li>
+                            <li>平衡效能與準確度</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>3.2 模型選擇建議</h2>
+            <div class="card-section">
+                <h3>一般文本處理</h3>
+                <ul>
+                    <li>建議使用：gemini-2.0-flash-lite-001
+                        <ul>
+                            <li>處理速度快</li>
+                            <li>資源消耗低</li>
+                            <li>適用場景：日常文件處理、簡單翻譯</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>專業內容分析</h3>
+                <ul>
+                    <li>建議使用：gpt-4o-mini 或 deepseek-r1
+                        <ul>
+                            <li>理解力強</li>
+                            <li>回答更專業</li>
+                            <li>適用場景：學術研究、專業報告</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>程式碼處理</h3>
+                <ul>
+                    <li>建議使用：deepseek-coder-v2-lite-instruct
+                        <ul>
+                            <li>專門優化程式碼理解和生成</li>
+                            <li>適用場景：程式碼分析、技術文檔</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>圖文混合處理</h3>
+                <ul>
+                    <li>建議使用：llava-llama3 或 llava-v1.5-7b
+                        <ul>
+                            <li>可同時處理圖片和文字</li>
+                            <li>適用場景：圖文報告、多媒體內容分析</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>3.3 模型使用注意事項</h2>
+            <div class="notice-section">
+                <h3>系統資源考量</h3>
+                <ul>
+                    <li>本地模型需要較大記憶體</li>
+                    <li>雲端模型需要穩定網路</li>
+                    <li>建議根據電腦配置選擇適合的模型</li>
+                </ul>
+
+                <h3>使用成本</h3>
+                <ul>
+                    <li>OpenRouter 模型可能需要額外費用</li>
+                    <li>本地模型為一次性下載</li>
+                    <li>建議先使用免費版本測試</li>
+                </ul>
+
+                <h3>效能優化</h3>
+                <ul>
+                    <li>可切換不同模型比較效果</li>
+                    <li>支援模型熱切換</li>
+                    <li>建議保持模型版本更新</li>
+                </ul>
+            </div>
+
+            <div id="mindmap">
+                <h2>3.4 雙語心智圖設定</h2>
+                <div class="image-section">
+                    <img src="./images/mindmap-settings.png" alt="心智圖設定介面">
+                </div>
+                
+                <div class="card-section">
+                    <h3>核心特色</h3>
+                    <ul>
+                        <li>雙語並列顯示：
+                            <ul>
+                                <li>中英文完美對照</li>
+                                <li>自動調整版面配置</li>
+                                <li>支援其他語言組合</li>
+                            </ul>
+                        </li>
+                        <li>客製化選項：
+                            <ul>
+                                <li>可調整心智圖層級（預設3層）</li>
+                                <li>自訂節點展開方式</li>
+                                <li>靈活的色彩主題設定</li>
+                            </ul>
+                        </li>
+                        <li>多元輸出格式：
+                            <ul>
+                                <li>HTML 互動式檢視</li>
+                                <li>PNG/SVG 圖片匯出</li>
+                                <li>PDF 文件輸出</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>使用建議</h3>
+                    <ul>
+                        <li>學術研究：設定 4-5 層深度，完整呈現研究架構</li>
+                        <li>課程筆記：使用 3 層結構，突出重點概念</li>
+                        <li>會議記錄：2-3 層最適合，快速掌握要點</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>如需更多協助，請聯繫：</p>
+        <ul>
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

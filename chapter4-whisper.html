@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper 語音模型設定 - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index.html">返回使用手冊</a>
+            <a href="chapter4-whisper_en.html">English Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>第四章：Whisper 語音模型設定</h1>
+
+        <div class="chapter-navigation">
+            <p>章節導航：</p>
+            <a href="chapter3-ai-models.html">第3章：AI模型設定</a> |
+            <a href="chapter4-whisper.html">第4章：Whisper設定</a> |
+            <a href="chapter5-file-formats.html">第5章：檔案格式支援</a>
+        </div>
+
+        <div class="content-section">
+            <h2>4.1 可選模型等級</h2>
+            <div class="image-section">
+                <img src="./images/whisper-models.png" alt="Whisper模型等級選擇">
+                <p>圖4-1：Whisper模型等級選擇介面</p>
+            </div>
+
+            <div class="model-comparison">
+                <h3>small（建議選擇）</h3>
+                <div class="image-section">
+                    <img src="./images/whisper-small.png" alt="Small模型設定介面">
+                    <p>圖4-2：Small模型設定和效果展示</p>
+                </div>
+                <div class="specs-section">
+                    <h4>適用配置：</h4>
+                    <ul>
+                        <li>CPU：4核心以上</li>
+                        <li>記憶體：8GB RAM</li>
+                        <li>硬碟空間：約 1GB</li>
+                    </ul>
+                    <h4>特點：</h4>
+                    <ul>
+                        <li>平衡效能與準確度</li>
+                        <li>適合一般用途</li>
+                        <li>處理速度適中</li>
+                    </ul>
+                </div>
+
+                <h3>其他可選模型</h3>
+                <div class="grid-2-columns">
+                    <div class="model-section">
+                        <h4>tiny</h4>
+                        <div class="image-section">
+                            <img src="./images/whisper-tiny.png" alt="Tiny模型設定介面">
+                        </div>
+                        <h5>最低配置需求：</h5>
+                        <ul>
+                            <li>CPU：雙核心</li>
+                            <li>記憶體：4GB RAM</li>
+                            <li>硬碟空間：約 500MB</li>
+                        </ul>
+                        <h5>適用場景：</h5>
+                        <ul>
+                            <li>資源受限的系統</li>
+                            <li>簡單的語音辨識任務</li>
+                            <li>需要快速處理的場合</li>
+                        </ul>
+                    </div>
+
+                    <div class="model-section">
+                        <h4>medium</h4>
+                        <div class="image-section">
+                            <img src="./images/whisper-medium.png" alt="Medium模型設定介面">
+                        </div>
+                        <h5>建議配置：</h5>
+                        <ul>
+                            <li>CPU：6核心以上</li>
+                            <li>記憶體：16GB RAM</li>
+                            <li>硬碟空間：約 2.5GB</li>
+                        </ul>
+                        <h5>適用場景：</h5>
+                        <ul>
+                            <li>需要較高準確度</li>
+                            <li>複雜的語音內容</li>
+                            <li>多語言處理</li>
+                        </ul>
+                    </div>
+
+                    <div class="model-section">
+                        <h4>large</h4>
+                        <div class="image-section">
+                            <img src="./images/whisper-large.png" alt="Large模型設定介面">
+                        </div>
+                        <h5>最低配置要求：</h5>
+                        <ul>
+                            <li>CPU：8核心以上</li>
+                            <li>記憶體：32GB RAM</li>
+                            <li>硬碟空間：約 5GB</li>
+                            <li>建議：NVIDIA GPU 6GB+ VRAM</li>
+                        </ul>
+                        <h5>適用場景：</h5>
+                        <ul>
+                            <li>專業語音轉錄</li>
+                            <li>需要最高準確度</li>
+                            <li>複雜環境下的語音辨識</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>4.2 Whisper API 選項</h2>
+            <div class="api-section">
+                <div class="image-section">
+                    <img src="./images/whisper-api.png" alt="Whisper API設定介面">
+                    <p>圖4-3：Whisper API設定介面</p>
+                </div>
+                <div class="api-info">
+                    <h3>使用時機</h3>
+                    <ul>
+                        <li>電腦配備不足以運行本地模型</li>
+                        <li>需要更快的處理速度</li>
+                        <li>不想下載和儲存本地模型</li>
+                        <li>需要更穩定的辨識品質</li>
+                    </ul>
+
+                    <h3>價格說明（OpenAI Whisper API）</h3>
+                    <ul>
+                        <li>一般音訊檔案：$0.006 / 分鐘</li>
+                        <li>例：1小時音訊約需 $0.36 美元</li>
+                    </ul>
+
+                    <h3>使用方式</h3>
+                    <ul>
+                        <li>在介面上勾選 "Whisper API" 選項</li>
+                        <li>確保已設定有效的 OpenAI API Key</li>
+                        <li>直接上傳音訊檔案進行處理</li>
+                    </ul>
+
+                    <h3>優點</h3>
+                    <ul>
+                        <li>不受本地硬體限制</li>
+                        <li>穩定的辨識品質</li>
+                        <li>支援多種音訊格式</li>
+                        <li>處理速度快</li>
+                    </ul>
+
+                    <h3>注意事項</h3>
+                    <ul>
+                        <li>需要穩定的網路連接</li>
+                        <li>需要有足夠的 API 額度</li>
+                        <li>音訊檔案大小限制：25 MB</li>
+                        <li>建議先估算成本再使用</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>4.3 本地模型 vs API 選擇建議</h2>
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <th>考量面向</th>
+                        <th>本地 Whisper 模型</th>
+                        <th>Whisper API</th>
+                    </tr>
+                    <tr>
+                        <td>成本</td>
+                        <td>一次性下載，無額外費用</td>
+                        <td>按使用量計費</td>
+                    </tr>
+                    <tr>
+                        <td>硬體需求</td>
+                        <td>較高</td>
+                        <td>最低配備即可</td>
+                    </tr>
+                    <tr>
+                        <td>處理速度</td>
+                        <td>依硬體性能而定</td>
+                        <td>快速且穩定</td>
+                    </tr>
+                    <tr>
+                        <td>網路需求</td>
+                        <td>下載後不需要</td>
+                        <td>需要穩定網路</td>
+                    </tr>
+                    <tr>
+                        <td>適用場景</td>
+                        <td>大量本地處理、隱私需求高</td>
+                        <td>臨時使用、硬體受限</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>4.4 成本估算範例</h2>
+            <div class="cost-examples">
+                <h3>小型專案（約 1 小時音訊）</h3>
+                <ul>
+                    <li>Whisper API：$0.36 美元</li>
+                    <li>本地模型：免費（需考慮硬體成本）</li>
+                </ul>
+
+                <h3>中型專案（約 10 小時音訊）</h3>
+                <ul>
+                    <li>Whisper API：$3.60 美元</li>
+                    <li>本地模型：免費（較適合）</li>
+                </ul>
+
+                <h3>大型專案（約 100 小時音訊）</h3>
+                <ul>
+                    <li>Whisper API：$36.00 美元</li>
+                    <li>本地模型：強烈建議（最具成本效益）</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>如需更多協助，請聯繫：</p>
+        <ul>
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

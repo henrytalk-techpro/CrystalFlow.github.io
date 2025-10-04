@@ -4,64 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node.js 安裝指南</title>
-    <link rel="stylesheet" href="styles.css"> <!-- 引入 CSS 樣式 -->
+    <link rel="stylesheet" href="styles.css"> <!-- 導入 CSS 樣式 -->
 </head>
 <body>
     <header>
-        <h1>Node.js 安裝指南</h1>
-        <nav>
-            <ul>
-                <li><a href="#requirements">系統需求</a></li>
-                <li><a href="#installation">安裝步驟</a></li>
-                <li><a href="#faq">常見問題解答</a></li>
-            </ul>
+        <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 10%; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="#requirements">系統需求</a>
+            <a href="#installation">安裝步驟</a>
+            <a href="#faq">常見問題</a>
+            <a href="node-install-guide_en.html">英文版</a>
         </nav>
     </header>
 
     <main>
         <h2 id="requirements">系統需求</h2>
         <ul>
-            <li>操作系統：Windows</li>
-            <li>硬體要求：至少 1GB RAM</li>
-            <li>麥克風：支援語音輸入功能</li>
-            <li>網路連接：需要下載安裝包</li>
+            <li>作業系統：Windows 11</li>
+            <li>硬體需求：至少 1GB RAM</li>
+            <li>網路連線：需要網路連線以下載安裝包</li>
         </ul>
 
         <h2 id="installation">安裝步驟</h2>
         <h3>1. 下載 Node.js</h3>
-        <p>訪問 <a href="https://nodejs.org/en/download/">Node.js 官方網站</a>，選擇適合您操作系統的安裝包進行下載。</p>
+        <p>前往 <a href="https://nodejs.org/en/download/">Node.js 官方網站</a> 並選擇適合您作業系統的安裝包下載。</p>
 
         <h3>2. 安裝 Node.js</h3>
-        <p>根據您的操作系統，按照以下步驟進行安裝：</p>
+        <p>請依照以下步驟進行安裝：</p>
         <ul>
-            <li><strong>Windows：</strong>雙擊下載的 .msi 文件，並按照安裝向導的指示進行安裝。</li>
+            <li><strong>Windows：</strong>雙擊下載的 .msi 檔案，並依照安裝精靈的指示進行安裝。</li>
         </ul>
+        <p><img src="./images/nodejs_notification.png" alt="注意事項" style="max-width:30%; height: auto;"> <br>注意：請勿勾選「自動安裝必要工具」選項，因為這會安裝許多本程式不需要的開發工具。</p>
 
         <h3>3. 安裝 markmap-cli</h3>
-        <p>安裝完成 Node.js 後，您可以使用 npm 安裝 markmap-cli。請在終端或命令提示符中輸入以下命令：</p>
+        <p>安裝完 Node.js 後，您可以使用 npm 來安裝 markmap-cli。請在終端機或命令提示字元中輸入以下指令：</p>
         <pre><code>npm install -g markmap-cli</code></pre>
-        <p>這將全局安裝 markmap-cli，您可以在任何地方使用它。</p>
+        <p>這將全域安裝 markmap-cli，讓您可以在任何地方使用它。</p>
 
         <h3>4. 驗證安裝</h3>
-        <p>安裝完成後，您可以在終端或命令提示符中輸入以下命令來驗證 markmap-cli 是否安裝成功：</p>
-        <pre><code>markmap -v</code></pre>
-        <p>如果顯示版本號，則表示安裝成功。</p>
+        <p>安裝完成後，您可以在終端機或命令提示字元中輸入以下指令來驗證 markmap-cli 是否安裝成功：</p>
+        <pre><code>npx markmap-cli --version</code></pre>
+        <p>如果顯示版本號碼，則表示安裝成功。</p>
 
-        <h2 id="faq">常見問題解答</h2>
+        <h2 id="faq">常見問題</h2>
         <ol>
-            <li><strong>如何卸載 Node.js？</strong>
+            <li><strong>如何解除安裝 Node.js？</strong>
                 <ul>
-                    <li>Windows：通過控制面板的"程序和功能"卸載。</li>
+                    <li>Windows：透過控制台的「程式和功能」進行解除安裝。</li>
                 </ul>
             </li>
             <li><strong>Node.js 和 npm 有什麼區別？</strong>
-                <p>Node.js 是一個 JavaScript 執行環境，而 npm 是 Node.js 的包管理器，用於安裝和管理 Node.js 的庫和工具。</p>
+                <p>Node.js 是一個 JavaScript 執行環境，而 npm 是 Node.js 的套件管理器，用於安裝和管理 Node.js 的函式庫和工具。</p>
             </li>
         </ol>
     </main>
 
     <footer>
-        <p>如需更多幫助，請聯繫：</p>
+        <p>如需更多協助，請聯繫：</p>
         <ul>
             <li>客服信箱：henrytalk.techpro@gmail.com</li>
             <li>官方網站：<a href="https://nodejs.org/">Node.js 官方網站</a></li>

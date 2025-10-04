@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG 知識增強問答功能 - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 100px; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px;">返回使用手冊</a>
+            <a href="chapter11-rag_en.html" style="color: white; text-decoration: none; margin: 0 15px;">English Version</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>第十一章：RAG 知識增強問答功能</h1>
+
+        <div class="chapter-navigation" style="margin: 20px 0; padding: 10px; background-color: #f5f5f5; border-radius: 5px;">
+            <p>章節導航：</p>
+            <a href="chapter10-file-server.html">第10章：家庭檔案伺服器</a> |
+            <a href="chapter11-rag.html">第11章：RAG知識增強問答</a> |
+            <a href="chapter12-media-download.html">第12章：媒體下載功能</a>
+        </div>
+
+        <div class="content-section">
+            <h2>11.1 RAG 功能概述</h2>
+            <div class="overview-section" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/rag-overview.png" alt="RAG功能概覽" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">圖11-1：RAG功能概覽</p>
+                </div>
+
+                <div class="features-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>基本原理</h3>
+                    <ul>
+                        <li>知識庫建立：
+                            <ul>
+                                <li>使用 LM Studio 的 embedding model 進行向量化</li>
+                                <li>自動處理並儲存文件內容</li>
+                                <li>建立高效能向量資料庫</li>
+                            </ul>
+                        </li>
+                        <li>智能檢索：
+                            <ul>
+                                <li>自動找出最相關的 5 筆資訊</li>
+                                <li>結合 AI 模型進行分析</li>
+                                <li>提供更準確的回答</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>11.2 支援的資料來源</h2>
+            <div class="data-sources" style="margin: 20px 0;">
+                <div class="sources-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="source-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>網路媒體</h3>
+                        <div class="image-section">
+                            <img src="./images/online-media-sources.png" alt="網路媒體來源" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>YouTube 影片：
+                                <ul>
+                                    <li>自動轉錄影片內容</li>
+                                    <li>處理字幕資訊</li>
+                                    <li>分析影片主題</li>
+                                </ul>
+                            </li>
+                            <li>其他影音平台：
+                                <ul>
+                                    <li>Facebook 影片</li>
+                                    <li>線上課程內容</li>
+                                    <li>網路研討會資料</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="source-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>本地文件</h3>
+                        <div class="image-section">
+                            <img src="./images/local-document-sources.png" alt="本地文件來源" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>文件類型：
+                                <ul>
+                                    <li>PDF 文件</li>
+                                    <li>Word 文件</li>
+                                    <li>PowerPoint 簡報</li>
+                                    <li>純文字檔案</li>
+                                </ul>
+                            </li>
+                            <li>音訊檔案：
+                                <ul>
+                                    <li>錄音檔案</li>
+                                    <li>語音備忘錄</li>
+                                    <li>會議記錄</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>11.3 使用方式</h2>
+            <div class="usage-guide" style="margin: 20px 0;">
+                <div class="guide-sections">
+                    <div class="section-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px; margin-bottom: 20px;">
+                        <h3>知識庫建立</h3>
+                        <div class="image-section">
+                            <img src="./images/knowledge-base-creation.png" alt="知識庫建立流程" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>資料處理流程：
+                                <ul>
+                                    <li>上傳或輸入網址</li>
+                                    <li>系統自動進行文字轉換</li>
+                                    <li>向量化處理並儲存</li>
+                                </ul>
+                            </li>
+                            <li>自動更新：
+                                <ul>
+                                    <li>新增資料自動處理</li>
+                                    <li>即時更新知識庫</li>
+                                    <li>保持資料最新狀態</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>問答操作</h3>
+                        <div class="image-section">
+                            <img src="./images/qa-operation.png" alt="問答操作介面" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>一般對話：
+                                <ul>
+                                    <li>直接在對話框輸入問題</li>
+                                    <li>按 Enter 發送（不使用 RAG）</li>
+                                    <li>獲得一般 AI 回答</li>
+                                </ul>
+                            </li>
+                            <li>RAG 增強回答：
+                                <ul>
+                                    <li>輸入問題後點擊 RAG 按鈕</li>
+                                    <li>系統自動檢索相關資訊</li>
+                                    <li>結合知識庫內容回答</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>11.4 應用場景</h2>
+            <div class="applications" style="margin: 20px 0;">
+                <div class="scenarios-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>學習研究</h3>
+                        <div class="image-section">
+                            <img src="./images/learning-research.png" alt="學習研究應用" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>課程內容理解：
+                                <ul>
+                                    <li>整理課程重點</li>
+                                    <li>解答課程相關問題</li>
+                                    <li>深入理解學習材料</li>
+                                </ul>
+                            </li>
+                            <li>研究資料分析：
+                                <ul>
+                                    <li>文獻綜述協助</li>
+                                    <li>研究方向建議</li>
+                                    <li>相關研究檢索</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>專業應用</h3>
+                        <div class="image-section">
+                            <img src="./images/professional-applications.png" alt="專業應用場景" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>會議記錄分析：
+                                <ul>
+                                    <li>重要決策追蹤</li>
+                                    <li>會議重點查詢</li>
+                                    <li>專案進度回顧</li>
+                                </ul>
+                            </li>
+                            <li>知識管理：
+                                <ul>
+                                    <li>企業文件檢索</li>
+                                    <li>專業知識問答</li>
+                                    <li>經驗分享傳承</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>11.5 使用建議</h2>
+            <div class="recommendations" style="margin: 20px 0;">
+                <div class="tips-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="tip-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>效能優化</h3>
+                        <div class="image-section">
+                            <img src="./images/performance-optimization.png" alt="效能優化建議" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>資料管理：
+                                <ul>
+                                    <li>定期整理知識庫</li>
+                                    <li>移除過時資料</li>
+                                    <li>保持資料相關性</li>
+                                </ul>
+                            </li>
+                            <li>查詢技巧：
+                                <ul>
+                                    <li>使用精確的關鍵詞</li>
+                                    <li>提供足夠的上下文</li>
+                                    <li>適時使用 RAG 功能</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>最佳實踐</h3>
+                        <div class="image-section">
+                            <img src="./images/best-practices.png" alt="最佳實踐建議" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>資料品質：
+                                <ul>
+                                    <li>確保原始資料準確性</li>
+                                    <li>維護資料的完整性</li>
+                                    <li>適當分類整理</li>
+                                </ul>
+                            </li>
+                            <li>使用時機：
+                                <ul>
+                                    <li>需要專業領域知識時</li>
+                                    <li>查證特定資訊時</li>
+                                    <li>深入分析問題時</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f5f5f5;">
+        <p>如需更多協助，請聯繫：</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

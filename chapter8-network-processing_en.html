@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Media Conversion Features - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index_en.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 100px; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="index_en.html" style="color: white; text-decoration: none; margin: 0 15px;">Back to User Manual</a>
+            <a href="chapter8-network-processing.html" style="color: white; text-decoration: none; margin: 0 15px;">Chinese Version</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>Chapter 8: Network Media Conversion Features</h1>
+
+        <div class="chapter-navigation" style="margin: 20px 0; padding: 10px; background-color: #f5f5f5; border-radius: 5px;">
+            <p>Chapter Navigation:</p>
+            <a href="chapter7-video-audio_en.html">Chapter 7: Video Audio Processing</a> |
+            <a href="chapter8-network-processing_en.html">Chapter 8: Network Media Conversion</a> |
+            <a href="chapter9-remote-control_en.html">Chapter 9: Mobile Remote Control</a>
+        </div>
+
+        <div class="content-section">
+            <h2>8.1 Process Network Info. Feature Description</h2>
+            <div class="image-section" style="margin: 20px 0;">
+                <img src="./images/network-info-interface.png" alt="Network Media Processing Interface" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                <p style="text-align: center; color: #666;">Figure 8-1: Network Media Processing Interface Overview</p>
+            </div>
+
+            <div class="supported-media" style="margin: 20px 0;">
+                <h3>Supported Network Media</h3>
+                <div class="media-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="media-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h4>YouTube Videos</h4>
+                        <div class="image-section">
+                            <img src="./images/youtube-processing.png" alt="YouTube Processing Example" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Automatically detects if subtitles are available</li>
+                            <li>With subtitles: Directly download and process subtitles</li>
+                            <li>Without subtitles: Use Whisper model to transcribe audio</li>
+                        </ul>
+                    </div>
+
+                    <div class="media-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h4>Facebook Content</h4>
+                        <div class="image-section">
+                            <img src="./images/facebook-processing.png" alt="Facebook Processing Example" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Supports regular videos</li>
+                            <li>Supports Facebook Reels</li>
+                            <li>Automatically uses Whisper model to process audio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>8.2 Processing Workflow</h2>
+            <div class="process-flow" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/processing-flow.png" alt="Processing Flow Diagram" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">Figure 8-2: Network Media Processing Workflow</p>
+                </div>
+
+                <div class="steps-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>Step 1: Enter Media URL</h3>
+                    <div class="image-section">
+                        <img src="./images/url-input.png" alt="URL Input Example" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+                    <ul>
+                        <li>Paste the link in the "Enter Media URL" field</li>
+                        <li>Supports links from YouTube, Facebook and other platforms</li>
+                        <li>Automatically identifies link type</li>
+                    </ul>
+
+                    <h3>Step 2: Select Processing Options</h3>
+                    <div class="image-section">
+                        <img src="./images/processing-options.png" alt="Processing Options Settings" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+                    <ul>
+                        <li>Download Subtitles: Download existing subtitles</li>
+                        <li>Transcription Mode: Speech-to-text mode</li>
+                        <li>Select target language</li>
+                    </ul>
+
+                    <h3>Step 3: Start Processing</h3>
+                    <div class="image-section">
+                        <img src="./images/processing-start.png" alt="Processing Start Interface" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+                    <ul>
+                        <li>Click "Process Network Info." to start processing</li>
+                        <li>Automatically determines processing method</li>
+                        <li>Shows processing progress</li>
+                        <li>Automatically outputs results when completed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>8.3 Usage Considerations</h2>
+            <div class="usage-notes" style="margin: 20px 0;">
+                <div class="notes-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                    <div class="note-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>URL Format</h3>
+                        <ul>
+                            <li>Ensure complete video URL is entered</li>
+                            <li>Supports standard sharing link formats</li>
+                            <li>Avoid using shortened URLs</li>
+                        </ul>
+                    </div>
+
+                    <div class="note-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Processing Time</h3>
+                        <ul>
+                            <li>Depends on video length</li>
+                            <li>Longer when using Whisper model</li>
+                            <li>Recommend reserving sufficient processing time</li>
+                        </ul>
+                    </div>
+
+                    <div class="note-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Network Requirements</h3>
+                        <ul>
+                            <li>Requires stable network connection</li>
+                            <li>Recommend using high-speed internet</li>
+                            <li>Avoid network interruptions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>8.4 Common Issue Troubleshooting</h2>
+            <div class="troubleshooting" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/troubleshooting.png" alt="Common Issue Troubleshooting Guide" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">Figure 8-3: Common Issue Troubleshooting Guide</p>
+                </div>
+
+                <div class="problems-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>Invalid URL</h3>
+                    <ul>
+                        <li>Check if URL is complete</li>
+                        <li>Confirm video is publicly accessible</li>
+                        <li>Check regional restrictions</li>
+                    </ul>
+
+                    <h3>Download Failed</h3>
+                    <ul>
+                        <li>Check network connection</li>
+                        <li>Confirm sufficient system resources</li>
+                        <li>Retry download process</li>
+                    </ul>
+
+                    <h3>Processing Interrupted</h3>
+                    <ul>
+                        <li>Check network stability</li>
+                        <li>Confirm system hasn't entered sleep mode</li>
+                        <li>Restart processing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>8.5 Best Practice Recommendations</h2>
+            <div class="best-practices" style="margin: 20px 0;">
+                <div class="practices-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="practice-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Performance Optimization</h3>
+                        <ul>
+                            <li>Avoid processing multiple long videos simultaneously</li>
+                            <li>Regularly clean temporary files</li>
+                            <li>Monitor system resource usage</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Result Management</h3>
+                        <ul>
+                            <li>Establish appropriate file naming conventions</li>
+                            <li>Regularly backup important content</li>
+                            <li>Organize output files</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f5f5f5;">
+        <p>For more assistance, please contact:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>Customer Service Email: henrytalk.techpro@gmail.com</li>
+            <li>Official Website: <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">Visit Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

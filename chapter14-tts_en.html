@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS Text-to-Speech Features - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index_en.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 100px; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="index_en.html" style="color: white; text-decoration: none; margin: 0 15px;">Back to User Manual</a>
+            <a href="chapter14-tts.html" style="color: white; text-decoration: none; margin: 0 15px;">Chinese Version</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>Chapter 14: TTS Text-to-Speech Features</h1>
+
+        <div class="chapter-navigation" style="margin: 20px 0; padding: 10px; background-color: #f5f5f5; border-radius: 5px;">
+            <p>Chapter Navigation:</p>
+            <a href="chapter13-mindmap-innovations_en.html">Chapter 13: Mindmap Innovation Features</a> |
+            <a href="chapter14-tts_en.html">Chapter 14: TTS Text-to-Speech Features</a>
+        </div>
+
+        <div class="content-section">
+            <h2>14.1 TTS Feature Overview</h2>
+            <div class="overview-section" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/tts-overview.png" alt="TTS Feature Overview" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">Figure 14-1: TTS Feature Overview</p>
+                </div>
+
+                <div class="features-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>Core Features</h3>
+                    <ul>
+                        <li>Multi-Provider Support:
+                            <ul>
+                                <li>OpenAI TTS: High-quality speech synthesis</li>
+                                <li>Azure Speech Services: Multi-language support</li>
+                                <li>Smart switching and configuration management</li>
+                            </ul>
+                        </li>
+                        <li>Rich Voice Options:
+                            <ul>
+                                <li>Multiple voice styles and tones</li>
+                                <li>Speed and pitch adjustment</li>
+                                <li>Multi-language voice support</li>
+                            </ul>
+                        </li>
+                        <li>Practical Functions:
+                            <ul>
+                                <li>Real-time speech generation</li>
+                                <li>Audio playback and saving</li>
+                                <li>Batch processing capabilities</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>14.2 Supported TTS Providers</h2>
+            <div class="providers-section" style="margin: 20px 0;">
+                <div class="providers-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="provider-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>OpenAI TTS</h3>
+                        <div class="image-section">
+                            <img src="./images/openai-tts.png" alt="OpenAI TTS Settings" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Voice Options:
+                                <ul>
+                                    <li>alloy: Neutral voice</li>
+                                    <li>echo: Warm voice</li>
+                                    <li>fable: Narrative voice</li>
+                                    <li>onyx: Deep voice</li>
+                                    <li>nova: Clear voice</li>
+                                    <li>shimmer: Soft voice</li>
+                                </ul>
+                            </li>
+                            <li>Model Options:
+                                <ul>
+                                    <li>tts-1: Standard quality</li>
+                                    <li>tts-1-hd: High quality</li>
+                                </ul>
+                            </li>
+                            <li>Speed Range: 0.25 - 4.0</li>
+                        </ul>
+                    </div>
+
+                    <div class="provider-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Azure Speech Services</h3>
+                        <div class="image-section">
+                            <img src="./images/azure-tts.png" alt="Azure TTS Settings" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Multi-language Support:
+                                <ul>
+                                    <li>English: Jenny, Guy</li>
+                                    <li>Chinese: Xiaoxiao, Yunxi</li>
+                                    <li>Japanese: Nanami</li>
+                                    <li>Korean: SunHi</li>
+                                </ul>
+                            </li>
+                            <li>Voice Types:
+                                <ul>
+                                    <li>Neural Voice: High quality</li>
+                                    <li>Standard Voice: Stable</li>
+                                </ul>
+                            </li>
+                            <li>Pitch Control: x-low to x-high</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>14.3 Usage Methods</h2>
+            <div class="usage-guide" style="margin: 20px 0;">
+                <div class="steps-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>Basic Operation Steps</h3>
+                    <div class="image-section">
+                        <img src="./images/tts-usage-steps.png" alt="TTS Usage Steps" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+                    <ol>
+                        <li>Click TTS Button
+                            <ul>
+                                <li>Ensure OpenAI API Key is configured</li>
+                                <li>System will automatically check configuration</li>
+                            </ul>
+                        </li>
+                        <li>Select TTS Provider
+                            <ul>
+                                <li>OpenAI TTS: Requires OpenAI API Key</li>
+                                <li>Azure Speech Services: Requires Azure configuration</li>
+                            </ul>
+                        </li>
+                        <li>Configure Voice Parameters
+                            <ul>
+                                <li>Select voice type</li>
+                                <li>Adjust speed and pitch</li>
+                                <li>Choose output format</li>
+                            </ul>
+                        </li>
+                        <li>Input Text and Generate
+                            <ul>
+                                <li>Enter text to convert in the text box</li>
+                                <li>Click "Generate Speech" button</li>
+                                <li>Wait for processing completion</li>
+                            </ul>
+                        </li>
+                        <li>Play and Save
+                            <ul>
+                                <li>Use play button to preview</li>
+                                <li>Save audio file to specified location</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <h2>14.4 Advanced Features</h2>
+            <div class="advanced-features" style="margin: 20px 0;">
+                <div class="features-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="feature-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Batch Processing</h3>
+                        <div class="image-section">
+                            <img src="./images/batch-tts.png" alt="Batch TTS Processing" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Support multiple texts processing simultaneously</li>
+                            <li>Automatic sequential file naming</li>
+                            <li>Progress display and status updates</li>
+                            <li>Batch save to specified directory</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Audio Playback Control</h3>
+                        <div class="image-section">
+                            <img src="./images/audio-controls.png" alt="Audio Playback Controls" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Real-time playback preview</li>
+                            <li>Play/pause control</li>
+                            <li>Volume adjustment</li>
+                            <li>Playback progress display</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>14.5 Configuration Requirements</h2>
+            <div class="configuration" style="margin: 20px 0;">
+                <div class="config-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="config-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>OpenAI TTS Configuration</h3>
+                        <ul>
+                            <li>API Key Setup:
+                                <ul>
+                                    <li>Enter valid OpenAI API Key in settings</li>
+                                    <li>Ensure account has sufficient credits</li>
+                                    <li>Check API Key permission settings</li>
+                                </ul>
+                            </li>
+                            <li>Network Requirements:
+                                <ul>
+                                    <li>Stable internet connection</li>
+                                    <li>Support for HTTPS requests</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="config-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Azure Speech Services Configuration</h3>
+                        <ul>
+                            <li>Azure Settings:
+                                <ul>
+                                    <li>API Key: ee3a413bd1ea490a8fef6c6013e07d65</li>
+                                    <li>Region: eastus</li>
+                                    <li>Endpoint: https://eastus.api.cognitive.microsoft.com/</li>
+                                </ul>
+                            </li>
+                            <li>Voice Configuration:
+                                <ul>
+                                    <li>Default uses standard voice</li>
+                                    <li>Support neural voice switching</li>
+                                    <li>Multi-language voice selection</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>14.6 Application Scenarios</h2>
+            <div class="applications" style="margin: 20px 0;">
+                <div class="scenarios-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Learning Assistance</h3>
+                        <ul>
+                            <li>Text-to-speech learning</li>
+                            <li>Multi-language pronunciation practice</li>
+                            <li>Listening training material creation</li>
+                            <li>Voice note generation</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Content Creation</h3>
+                        <ul>
+                            <li>Podcast audio production</li>
+                            <li>Audiobook generation</li>
+                            <li>Educational video voiceover</li>
+                            <li>Multimedia content creation</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Business Applications</h3>
+                        <ul>
+                            <li>Meeting record vocalization</li>
+                            <li>Product introduction audio</li>
+                            <li>Customer service voice</li>
+                            <li>Training material creation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>14.7 Common Issue Resolution</h2>
+            <div class="troubleshooting" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/tts-troubleshooting.png" alt="TTS Issue Resolution Guide" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">Figure 14-2: TTS Issue Resolution Guide</p>
+                </div>
+
+                <div class="problems-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>API Related Issues</h3>
+                    <ul>
+                        <li>API Key Error:
+                            <ul>
+                                <li>Check if API Key is correct</li>
+                                <li>Confirm account has sufficient credits</li>
+                                <li>Check network connection status</li>
+                            </ul>
+                        </li>
+                        <li>Generation Failed:
+                            <ul>
+                                <li>Check if input text is empty</li>
+                                <li>Confirm text length limits</li>
+                                <li>Retry generation operation</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>Audio Playback Issues</h3>
+                    <ul>
+                        <li>Unable to Play:
+                            <ul>
+                                <li>Check audio device connection</li>
+                                <li>Confirm system volume settings</li>
+                                <li>Check audio file integrity</li>
+                            </ul>
+                        </li>
+                        <li>Audio Quality Issues:
+                            <ul>
+                                <li>Adjust voice parameter settings</li>
+                                <li>Select high-quality model</li>
+                                <li>Check output format settings</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>14.8 Best Practice Recommendations</h2>
+            <div class="best-practices" style="margin: 20px 0;">
+                <div class="practices-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="practice-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Performance Optimization</h3>
+                        <ul>
+                            <li>Text Length Control:
+                                <ul>
+                                    <li>Recommend processing no more than 5000 characters at once</li>
+                                    <li>Long texts should be processed in segments</li>
+                                    <li>Use batch processing functionality</li>
+                                </ul>
+                            </li>
+                            <li>Network Optimization:
+                                <ul>
+                                    <li>Ensure stable network connection</li>
+                                    <li>Avoid simultaneous multiple TTS requests</li>
+                                    <li>Use API credits reasonably</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Quality Enhancement</h3>
+                        <ul>
+                            <li>Voice Selection:
+                                <ul>
+                                    <li>Choose appropriate voice based on content type</li>
+                                    <li>Test different voice effects</li>
+                                    <li>Consider target audience preferences</li>
+                                </ul>
+                            </li>
+                            <li>Parameter Adjustment:
+                                <ul>
+                                    <li>Appropriately adjust speed and pitch</li>
+                                    <li>Select high-quality models</li>
+                                    <li>Test different setting combinations</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f5f5f5;">
+        <p>For more assistance, please contact:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>Customer Service Email: henrytalk.techpro@gmail.com</li>
+            <li>Official Website: <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">Visit Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

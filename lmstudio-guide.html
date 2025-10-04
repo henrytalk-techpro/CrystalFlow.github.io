@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Studio 安裝與設定指南</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="alternate" href="lmstudio-guide_en.html" hreflang="en" title="LM Studio Installation and Setup Guide">
+</head>
+<body>
+    <header>
+        <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 10%; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="#introduction">簡介</a>
+            <a href="#requirements">系統需求</a>
+            <a href="#installation">安裝步驟</a>
+            <a href="#setup">模型設定</a>
+            <a href="#verification">驗證</a>
+            <a href="#troubleshooting">故障排除</a>
+            <a href="#advanced">進階設定</a>
+            <a href="lmstudio-guide_en.html">英文版</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>LM Studio 安裝與設定指南</h1>
+
+        <h2 id="introduction">1. LM Studio 簡介</h2>
+        <p>LM Studio 是一個強大的本地 AI 模型管理工具，讓您能夠在本機上運行各種 AI 模型，無需依賴雲端服務。主要功能包括：</p>
+        <ul>
+            <li>支援多種 AI 模型</li>
+            <li>提供本地 API 服務</li>
+            <li>使用者友善介面</li>
+            <li>GPU 加速支援</li>
+        </ul>
+
+        <h2 id="requirements">2. 系統需求</h2>
+        <ul>
+            <li>作業系統：Windows 10/11、macOS 或 Linux</li>
+            <li>硬體需求：
+                <ul>
+                    <li>最低配備：8GB RAM、支援 AVX2 的 CPU</li>
+                    <li>建議配備：16GB+ RAM、NVIDIA GPU（支援 CUDA）</li>
+                    <li>儲存空間：至少 10GB 可用空間</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 id="installation">3. 安裝步驟</h2>
+        <ol>
+            <li>下載 LM Studio
+                <ul>
+                    <li>前往 <a href="https://lmstudio.ai/" target="_blank">https://lmstudio.ai/</a></li>
+                    <li>選擇與您系統相容的版本</li>
+                </ul>
+            </li>
+            <li>安裝過程
+                <ul>
+                    <li>執行下載的安裝程式</li>
+                    <li>依照安裝精靈的指示進行</li>
+                    <li>首次啟動可能需要管理員權限</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 id="setup">4. 設定 text-embedding-nomic-embed-text-v1.5 模型</h2>
+        <ol>
+            <li>啟動 LM Studio</li>
+            <li>下載模型
+                <ul>
+                    <li>點擊左側的模型庫圖示</li>
+                    <li>搜尋 "text-embedding-nomic-embed-text-v1.5"</li>
+                    <li>點擊下載按鈕（約 84.11 MB）</li>
+                </ul>
+            </li>
+            <li>設定本地伺服器
+                <ul>
+                    <li>在主介面選擇已下載的模型</li>
+                    <li>點擊「設定」按鈕檢查配置：
+                        <ul>
+                            <li>上下文長度：2048</li>
+                            <li>GPU 卸載：12/12（如果有 GPU）</li>
+                            <li>評估批次大小：512</li>
+                        </ul>
+                    </li>
+                    <li>確保「狀態：運行中」顯示綠色</li>
+                    <li>伺服器地址將顯示為：http://127.0.0.1:11435</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 id="verification">5. 驗證設定</h2>
+        <ol>
+            <li>檢查伺服器狀態
+                <ul>
+                    <li>確認狀態顯示「就緒」</li>
+                    <li>檢查開發者日誌是否有錯誤訊息</li>
+                </ul>
+            </li>
+            <li>測試 API 連接
+                <ul>
+                    <li>使用提供的 cURL 指令進行測試</li>
+                    <li>驗證回應是否正常</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 id="troubleshooting">6. 故障排除</h2>
+        <dl>
+            <dt>問：模型無法載入？</dt>
+            <dd>答：檢查：
+                <ul>
+                    <li>系統記憶體是否足夠</li>
+                    <li>GPU 驅動程式是否更新</li>
+                    <li>磁碟空間是否充足</li>
+                </ul>
+            </dd>
+
+            <dt>問：API 連接失敗？</dt>
+            <dd>答：確認：
+                <ul>
+                    <li>伺服器狀態是否運行中</li>
+                    <li>端口 11435 是否被其他應用程式佔用</li>
+                    <li>防火牆設定是否允許連接</li>
+                </ul>
+            </dd>
+        </dl>
+
+        <h2 id="advanced">7. 進階設定</h2>
+        <ul>
+            <li>GPU 記憶體管理
+                <ul>
+                    <li>調整 GPU 卸載設定以優化效能</li>
+                    <li>監控 GPU 使用率</li>
+                </ul>
+            </li>
+            <li>效能優化
+                <ul>
+                    <li>調整批次大小以平衡速度和記憶體使用</li>
+                    <li>使用「保持模型在記憶體中」選項以加快回應時間</li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f5f5f5;">
+        <p>如需更多協助，請聯繫：</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">造訪我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

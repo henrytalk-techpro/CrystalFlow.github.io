@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS 文字轉語音功能 - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 100px; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px;">返回使用手冊</a>
+            <a href="chapter14-tts_en.html" style="color: white; text-decoration: none; margin: 0 15px;">English Version</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>第十四章：TTS 文字轉語音功能</h1>
+
+        <div class="chapter-navigation" style="margin: 20px 0; padding: 10px; background-color: #f5f5f5; border-radius: 5px;">
+            <p>章節導航：</p>
+            <a href="chapter13-mindmap-innovations.html">第13章：心智圖創新功能</a> |
+            <a href="chapter14-tts.html">第14章：TTS 文字轉語音功能</a>
+        </div>
+
+        <div class="content-section">
+            <h2>14.1 TTS 功能概述</h2>
+            <div class="overview-section" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/tts-overview.png" alt="TTS功能概覽" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">圖14-1：TTS功能概覽</p>
+                </div>
+
+                <div class="features-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>核心功能</h3>
+                    <ul>
+                        <li>多提供商支援：
+                            <ul>
+                                <li>OpenAI TTS：高品質語音合成</li>
+                                <li>Azure Speech Services：多語言支援</li>
+                                <li>智能切換和配置管理</li>
+                            </ul>
+                        </li>
+                        <li>豐富的語音選項：
+                            <ul>
+                                <li>多種語音風格和音色</li>
+                                <li>語速和音調調整</li>
+                                <li>多語言語音支援</li>
+                            </ul>
+                        </li>
+                        <li>實用功能：
+                            <ul>
+                                <li>即時語音生成</li>
+                                <li>音頻播放和保存</li>
+                                <li>批量處理功能</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>14.2 支援的 TTS 提供商</h2>
+            <div class="providers-section" style="margin: 20px 0;">
+                <div class="providers-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="provider-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>OpenAI TTS</h3>
+                        <div class="image-section">
+                            <img src="./images/openai-tts.png" alt="OpenAI TTS設定" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>語音選項：
+                                <ul>
+                                    <li>alloy：中性語音</li>
+                                    <li>echo：溫暖語音</li>
+                                    <li>fable：敘事語音</li>
+                                    <li>onyx：深沉語音</li>
+                                    <li>nova：清晰語音</li>
+                                    <li>shimmer：柔和語音</li>
+                                </ul>
+                            </li>
+                            <li>模型選項：
+                                <ul>
+                                    <li>tts-1：標準品質</li>
+                                    <li>tts-1-hd：高品質</li>
+                                </ul>
+                            </li>
+                            <li>語速範圍：0.25 - 4.0</li>
+                        </ul>
+                    </div>
+
+                    <div class="provider-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Azure Speech Services</h3>
+                        <div class="image-section">
+                            <img src="./images/azure-tts.png" alt="Azure TTS設定" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>多語言支援：
+                                <ul>
+                                    <li>英文：Jenny, Guy</li>
+                                    <li>中文：曉曉, 雲希</li>
+                                    <li>日文：七海</li>
+                                    <li>韓文：善熙</li>
+                                </ul>
+                            </li>
+                            <li>語音類型：
+                                <ul>
+                                    <li>神經語音 (Neural)：高品質</li>
+                                    <li>標準語音 (Standard)：穩定</li>
+                                </ul>
+                            </li>
+                            <li>音調控制：x-low 到 x-high</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>14.3 使用方式</h2>
+            <div class="usage-guide" style="margin: 20px 0;">
+                <div class="steps-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>基本操作步驟</h3>
+                    <div class="image-section">
+                        <img src="./images/tts-usage-steps.png" alt="TTS使用步驟" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+                    <ol>
+                        <li>點擊 TTS 按鈕
+                            <ul>
+                                <li>確保已設定 OpenAI API Key</li>
+                                <li>系統會自動檢查配置</li>
+                            </ul>
+                        </li>
+                        <li>選擇 TTS 提供商
+                            <ul>
+                                <li>OpenAI TTS：需要 OpenAI API Key</li>
+                                <li>Azure Speech Services：需要 Azure 配置</li>
+                            </ul>
+                        </li>
+                        <li>設定語音參數
+                            <ul>
+                                <li>選擇語音類型</li>
+                                <li>調整語速和音調</li>
+                                <li>選擇輸出格式</li>
+                            </ul>
+                        </li>
+                        <li>輸入文字並生成
+                            <ul>
+                                <li>在文字框中輸入要轉換的文字</li>
+                                <li>點擊「生成語音」按鈕</li>
+                                <li>等待處理完成</li>
+                            </ul>
+                        </li>
+                        <li>播放和保存
+                            <ul>
+                                <li>使用播放按鈕預覽</li>
+                                <li>保存音頻文件到指定位置</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <h2>14.4 進階功能</h2>
+            <div class="advanced-features" style="margin: 20px 0;">
+                <div class="features-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="feature-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>批量處理</h3>
+                        <div class="image-section">
+                            <img src="./images/batch-tts.png" alt="批量TTS處理" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>支援多個文字同時處理</li>
+                            <li>自動生成序號文件名</li>
+                            <li>進度顯示和狀態更新</li>
+                            <li>批量保存到指定目錄</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>音頻播放控制</h3>
+                        <div class="image-section">
+                            <img src="./images/audio-controls.png" alt="音頻播放控制" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>即時播放預覽</li>
+                            <li>播放/暫停控制</li>
+                            <li>音量調節</li>
+                            <li>播放進度顯示</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>14.5 配置要求</h2>
+            <div class="configuration" style="margin: 20px 0;">
+                <div class="config-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="config-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>OpenAI TTS 配置</h3>
+                        <ul>
+                            <li>API Key 設定：
+                                <ul>
+                                    <li>在設定中輸入有效的 OpenAI API Key</li>
+                                    <li>確保帳戶有足夠的額度</li>
+                                    <li>檢查 API Key 權限設定</li>
+                                </ul>
+                            </li>
+                            <li>網路要求：
+                                <ul>
+                                    <li>穩定的網路連接</li>
+                                    <li>支援 HTTPS 請求</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="config-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Azure Speech Services 配置</h3>
+                        <ul>
+                            <li>Azure 設定：
+                                <ul>
+                                    <li>API Key：ee3a413bd1ea490a8fef6c6013e07d65</li>
+                                    <li>區域：eastus</li>
+                                    <li>端點：https://eastus.api.cognitive.microsoft.com/</li>
+                                </ul>
+                            </li>
+                            <li>語音配置：
+                                <ul>
+                                    <li>預設使用標準語音</li>
+                                    <li>支援神經語音切換</li>
+                                    <li>多語言語音選擇</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>14.6 應用場景</h2>
+            <div class="applications" style="margin: 20px 0;">
+                <div class="scenarios-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>學習輔助</h3>
+                        <ul>
+                            <li>文字轉語音學習</li>
+                            <li>多語言發音練習</li>
+                            <li>聽力訓練材料製作</li>
+                            <li>語音筆記生成</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>內容創作</h3>
+                        <ul>
+                            <li>播客音頻製作</li>
+                            <li>有聲書生成</li>
+                            <li>教學視頻配音</li>
+                            <li>多媒體內容製作</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>商務應用</h3>
+                        <ul>
+                            <li>會議記錄語音化</li>
+                            <li>產品介紹音頻</li>
+                            <li>客戶服務語音</li>
+                            <li>培訓材料製作</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>14.7 常見問題解決</h2>
+            <div class="troubleshooting" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/tts-troubleshooting.png" alt="TTS問題解決指南" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">圖14-2：TTS問題解決指南</p>
+                </div>
+
+                <div class="problems-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>API 相關問題</h3>
+                    <ul>
+                        <li>API Key 錯誤：
+                            <ul>
+                                <li>檢查 API Key 是否正確</li>
+                                <li>確認帳戶額度是否充足</li>
+                                <li>檢查網路連接狀態</li>
+                            </ul>
+                        </li>
+                        <li>生成失敗：
+                            <ul>
+                                <li>檢查輸入文字是否為空</li>
+                                <li>確認文字長度限制</li>
+                                <li>重試生成操作</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>音頻播放問題</h3>
+                    <ul>
+                        <li>無法播放：
+                            <ul>
+                                <li>檢查音頻設備連接</li>
+                                <li>確認系統音量設定</li>
+                                <li>檢查音頻文件完整性</li>
+                            </ul>
+                        </li>
+                        <li>音質問題：
+                            <ul>
+                                <li>調整語音參數設定</li>
+                                <li>選擇高品質模型</li>
+                                <li>檢查輸出格式設定</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>14.8 最佳實踐建議</h2>
+            <div class="best-practices" style="margin: 20px 0;">
+                <div class="practices-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="practice-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>效能優化</h3>
+                        <ul>
+                            <li>文字長度控制：
+                                <ul>
+                                    <li>建議單次處理不超過 5000 字元</li>
+                                    <li>長文字建議分段處理</li>
+                                    <li>使用批量處理功能</li>
+                                </ul>
+                            </li>
+                            <li>網路優化：
+                                <ul>
+                                    <li>確保穩定的網路連接</li>
+                                    <li>避免同時進行多個 TTS 請求</li>
+                                    <li>合理使用 API 額度</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>品質提升</h3>
+                        <ul>
+                            <li>語音選擇：
+                                <ul>
+                                    <li>根據內容類型選擇合適語音</li>
+                                    <li>測試不同語音效果</li>
+                                    <li>考慮目標聽眾偏好</li>
+                                </ul>
+                            </li>
+                            <li>參數調整：
+                                <ul>
+                                    <li>適當調整語速和音調</li>
+                                    <li>選擇高品質模型</li>
+                                    <li>測試不同設定組合</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f5f5f5;">
+        <p>如需更多協助，請聯繫：</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

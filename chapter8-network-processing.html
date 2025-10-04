@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網路媒體轉換功能 - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 100px; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px;">返回使用手冊</a>
+            <a href="chapter8-network-processing_en.html" style="color: white; text-decoration: none; margin: 0 15px;">English Version</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>第八章：網路媒體轉換功能</h1>
+
+        <div class="chapter-navigation" style="margin: 20px 0; padding: 10px; background-color: #f5f5f5; border-radius: 5px;">
+            <p>章節導航：</p>
+            <a href="chapter7-video-audio.html">第7章：視頻音訊處理</a> |
+            <a href="chapter8-network-processing.html">第8章：網路媒體轉換</a> |
+            <a href="chapter9-remote-control.html">第9章：手機遠端控制</a>
+        </div>
+
+        <div class="content-section">
+            <h2>8.1 Process Network Info. 功能說明</h2>
+            <div class="image-section" style="margin: 20px 0;">
+                <img src="./images/network-info-interface.png" alt="網路媒體處理介面" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                <p style="text-align: center; color: #666;">圖8-1：網路媒體處理介面總覽</p>
+            </div>
+
+            <div class="supported-media" style="margin: 20px 0;">
+                <h3>支援的網路媒體</h3>
+                <div class="media-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="media-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h4>YouTube 影片</h4>
+                        <div class="image-section">
+                            <img src="./images/youtube-processing.png" alt="YouTube處理示例" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>自動檢測是否有字幕</li>
+                            <li>有字幕：直接下載並處理字幕</li>
+                            <li>無字幕：使用 Whisper 模型轉錄語音</li>
+                        </ul>
+                    </div>
+
+                    <div class="media-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h4>Facebook 內容</h4>
+                        <div class="image-section">
+                            <img src="./images/facebook-processing.png" alt="Facebook處理示例" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>支援一般影片</li>
+                            <li>支援 Facebook Reels</li>
+                            <li>自動使用 Whisper 模型處理音訊</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>8.2 處理流程</h2>
+            <div class="process-flow" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/processing-flow.png" alt="處理流程圖" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">圖8-2：網路媒體處理流程</p>
+                </div>
+
+                <div class="steps-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>步驟 1：輸入媒體網址</h3>
+                    <div class="image-section">
+                        <img src="./images/url-input.png" alt="網址輸入示例" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+                    <ul>
+                        <li>在 "Enter Media URL" 欄位貼上連結</li>
+                        <li>支援 YouTube、Facebook 等平台的連結</li>
+                        <li>自動識別連結類型</li>
+                    </ul>
+
+                    <h3>步驟 2：選擇處理選項</h3>
+                    <div class="image-section">
+                        <img src="./images/processing-options.png" alt="處理選項設定" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+                    <ul>
+                        <li>Download Subtitles：下載現有字幕</li>
+                        <li>Transcription Mode：語音轉文字模式</li>
+                        <li>選擇目標語言</li>
+                    </ul>
+
+                    <h3>步驟 3：開始處理</h3>
+                    <div class="image-section">
+                        <img src="./images/processing-start.png" alt="處理開始介面" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+                    <ul>
+                        <li>點擊 "Process Network Info." 開始處理</li>
+                        <li>自動判斷處理方式</li>
+                        <li>顯示處理進度</li>
+                        <li>完成後自動輸出結果</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>8.3 使用注意事項</h2>
+            <div class="usage-notes" style="margin: 20px 0;">
+                <div class="notes-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                    <div class="note-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>網址格式</h3>
+                        <ul>
+                            <li>確保輸入完整的影片網址</li>
+                            <li>支援標準分享連結格式</li>
+                            <li>避免使用短網址</li>
+                        </ul>
+                    </div>
+
+                    <div class="note-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>處理時間</h3>
+                        <ul>
+                            <li>依據影片長度而定</li>
+                            <li>使用 Whisper 模型時會較久</li>
+                            <li>建議預留足夠處理時間</li>
+                        </ul>
+                    </div>
+
+                    <div class="note-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>網路需求</h3>
+                        <ul>
+                            <li>需要穩定的網路連接</li>
+                            <li>建議使用高速網路</li>
+                            <li>避免網路中斷</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>8.4 常見問題處理</h2>
+            <div class="troubleshooting" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/troubleshooting.png" alt="常見問題處理指南" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">圖8-3：常見問題處理指南</p>
+                </div>
+
+                <div class="problems-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>網址無效</h3>
+                    <ul>
+                        <li>檢查網址是否完整</li>
+                        <li>確認影片是否可公開訪問</li>
+                        <li>檢查地區限制</li>
+                    </ul>
+
+                    <h3>下載失敗</h3>
+                    <ul>
+                        <li>檢查網路連接</li>
+                        <li>確認系統資源充足</li>
+                        <li>重試下載程序</li>
+                    </ul>
+
+                    <h3>處理中斷</h3>
+                    <ul>
+                        <li>檢查網路穩定性</li>
+                        <li>確認系統未進入休眠</li>
+                        <li>重新開始處理</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>8.5 最佳實踐建議</h2>
+            <div class="best-practices" style="margin: 20px 0;">
+                <div class="practices-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="practice-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>效能優化</h3>
+                        <ul>
+                            <li>避免同時處理多個長視頻</li>
+                            <li>定期清理暫存檔案</li>
+                            <li>監控系統資源使用</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>結果管理</h3>
+                        <ul>
+                            <li>建立合適的檔案命名規則</li>
+                            <li>定期備份重要內容</li>
+                            <li>整理輸出檔案</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f5f5f5;">
+        <p>如需更多協助，請聯繫：</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

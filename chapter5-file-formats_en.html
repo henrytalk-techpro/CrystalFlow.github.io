@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Format Support - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index_en.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index_en.html">Back to User Manual</a>
+            <a href="chapter5-file-formats.html">Chinese Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Chapter 5: File Format Support</h1>
+
+        <div class="chapter-navigation">
+            <p>Chapter Navigation:</p>
+            <a href="chapter4-whisper_en.html">Chapter 4: Whisper Settings</a> |
+            <a href="chapter5-file-formats_en.html">Chapter 5: File Format Support</a> |
+            <a href="chapter6-audio-processing_en.html">Chapter 6: Audio Processing Features</a>
+        </div>
+
+        <div class="content-section">
+            <h2>5.1 Image Format Support</h2>
+            <div class="card-section">
+                <div class="image-section">
+                    <img src="./images/image-formats.png" alt="Supported Image Formats">
+                    <p>Figure 5-1: Supported Image Format Examples</p>
+                </div>
+
+                <div class="grid-2-columns">
+                    <div class="card-section">
+                        <h3>Standard Image Formats</h3>
+                        <div class="image-section">
+                            <img src="./images/standard-image-formats.png" alt="Standard Image Format Examples">
+                        </div>
+                        <ul>
+                            <li>JPG/JPEG
+                                <ul>
+                                    <li>Most common image format</li>
+                                    <li>Suitable for photos and complex images</li>
+                                    <li>Supports various resolutions</li>
+                                </ul>
+                            </li>
+                            <li>PNG
+                                <ul>
+                                    <li>Supports transparent background</li>
+                                    <li>Suitable for screenshots and text images</li>
+                                    <li>Lossless compression format</li>
+                                </ul>
+                            </li>
+                            <li>BMP
+                                <ul>
+                                    <li>Uncompressed format</li>
+                                    <li>Preserves original image quality completely</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-section">
+                        <h3>Special Image Formats</h3>
+                        <div class="image-section">
+                            <img src="./images/special-image-formats.png" alt="Special Image Format Examples">
+                        </div>
+                        <ul>
+                            <li>HEIC/HEIF
+                                <ul>
+                                    <li>Common format for iOS devices</li>
+                                    <li>Automatically converts to JPG for processing</li>
+                                    <li>Maintains original image quality</li>
+                                </ul>
+                            </li>
+                            <li>WebP
+                                <ul>
+                                    <li>Modern image format developed by Google</li>
+                                    <li>Supports animated images</li>
+                                    <li>Higher compression efficiency</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>5.2 Document Format Support</h2>
+            <div class="card-section">
+                <div class="image-section">
+                    <img src="./images/document-formats.png" alt="Supported Document Formats">
+                    <p>Figure 5-2: Supported Document Format Overview</p>
+                </div>
+
+                <h3>Document Processing Files</h3>
+                <ul>
+                    <li>PDF
+                        <ul>
+                            <li>Supports multi-page documents</li>
+                            <li>Can select page range for processing</li>
+                            <li>Supports mixed text and image content</li>
+                            <li>Can process scanned documents</li>
+                        </ul>
+                    </li>
+                    <li>Microsoft Office Formats
+                        <ul>
+                            <li>Word (.doc, .docx)
+                                <ul>
+                                    <li>Complete text format support</li>
+                                    <li>Preserves paragraph structure</li>
+                                    <li>Supports table conversion</li>
+                                </ul>
+                            </li>
+                            <li>PowerPoint (.ppt, .pptx)
+                                <ul>
+                                    <li>Supports slide content extraction</li>
+                                    <li>Preserves presentation structure</li>
+                                    <li>Can process embedded images</li>
+                                </ul>
+                            </li>
+                            <li>Excel (.xls, .xlsx)
+                                <ul>
+                                    <li>Table data processing</li>
+                                    <li>Multi-worksheet support</li>
+                                    <li>Data format preservation</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h3>Plain Text Files</h3>
+                <ul>
+                    <li>TXT
+                        <ul>
+                            <li>Supports multiple encodings (UTF-8, Big5, etc.)</li>
+                            <li>Automatic encoding detection</li>
+                            <li>Suitable for large text processing</li>
+                        </ul>
+                    </li>
+                    <li>Markdown (.md)
+                        <ul>
+                            <li>Preserves format markers</li>
+                            <li>Supports conversion to other formats</li>
+                            <li>Suitable for technical documentation</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>5.3 Processing Recommendations</h2>
+            <div class="card-section">
+                <div class="image-section">
+                    <img src="./images/processing-tips.png" alt="Processing Recommendations Diagram">
+                    <p>Figure 5-3: File Processing Recommendations</p>
+                </div>
+
+                <div class="tips-section">
+                    <h3>Image Processing Recommendations</h3>
+                    <ul>
+                        <li>Image size: Recommend not exceeding 10MB</li>
+                        <li>Resolution: Recommend 300-1200 DPI</li>
+                        <li>Text images: Ensure text is clear and readable</li>
+                    </ul>
+
+                    <h3>Document Processing Recommendations</h3>
+                    <ul>
+                        <li>PDF Documents:
+                            <ul>
+                                <li>Recommend confirming if it's a text-based PDF first</li>
+                                <li>For scanned documents, ensure scanning quality</li>
+                                <li>Can selectively process page ranges</li>
+                            </ul>
+                        </li>
+                        <li>Office Documents:
+                            <ul>
+                                <li>Recommend using newer format versions</li>
+                                <li>Ensure documents are not encrypted</li>
+                                <li>Complex formats may require preprocessing</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>5.4 Batch Processing Features</h2>
+            <div class="card-section">
+                <div class="image-section">
+                    <img src="./images/batch-processing.png" alt="Batch Processing Interface">
+                    <p>Figure 5-4: Batch Processing Feature Interface</p>
+                </div>
+
+                <h3>Supported Features</h3>
+                <ul>
+                    <li>Multiple file simultaneous processing</li>
+                    <li>Automatic format recognition</li>
+                    <li>Unified output settings</li>
+                </ul>
+
+                <h3>Usage Recommendations</h3>
+                <ul>
+                    <li>Recommend processing by file type categories</li>
+                    <li>For large quantities of files, recommend batch processing</li>
+                    <li>Pay attention to checking output results</li>
+                </ul>
+
+                <div class="image-section">
+                    <img src="./images/batch-example.png" alt="Batch Processing Example">
+                    <p>Figure 5-5: Batch Processing Practical Application Example</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>For more assistance, please contact:</p>
+        <ul>
+            <li>Customer Service Email: henrytalk.techpro@gmail.com</li>
+            <li>Official Website: <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">Visit Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Installation Guide</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Import CSS styles -->
+</head>
+<body>
+    <header>
+        <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 10%; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="#requirements">System Requirements</a>
+            <a href="#installation">Installation Steps</a>
+            <a href="#faq">FAQ</a>
+            <a href="node-install-guide.html">Chinese Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="requirements">System Requirements</h2>
+        <ul>
+            <li>Operating System: Windows 11</li>
+            <li>Hardware Requirements: At least 1GB RAM</li>
+            <li>Network Connection: Required to download the installation package</li>
+        </ul>
+
+        <h2 id="installation">Installation Steps</h2>
+        <h3>1. Download Node.js</h3>
+        <p>Visit the <a href="https://nodejs.org/en/download/">official Node.js website</a> and select the installation package suitable for your operating system to download.</p>
+
+        <h3>2. Install Node.js</h3>
+        <p>Follow the steps below to install based on your operating system:</p>
+        <ul>
+            <li><strong>Windows:</strong> Double-click the downloaded .msi file and follow the instructions in the installation wizard.</li>
+        </ul>
+        <p><img src="./images/nodejs_notification.png" alt="Note" style="max-width:30%; height: auto;"> <br>Note: "automatically install necessary tools" will install many developer tools that this program does not require, so do not check this option.</p>
+
+        <h3>3. Install markmap-cli</h3>
+        <p>After installing Node.js, you can use npm to install markmap-cli. Please enter the following command in the terminal or command prompt:</p>
+        <pre><code>npm install -g markmap-cli</code></pre>
+        <p>This will globally install markmap-cli, allowing you to use it anywhere.</p>
+
+        <h3>4. Verify Installation</h3>
+        <p>After installation, you can enter the following command in the terminal or command prompt to verify if markmap-cli was installed successfully:</p>
+        <pre><code>npx markmap-cli --version</code></pre>
+        <p>If a version number is displayed, the installation was successful.</p>
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+        <ol>
+            <li><strong>How to uninstall Node.js?</strong>
+                <ul>
+                    <li>Windows: Uninstall through "Programs and Features" in the Control Panel.</li>
+                </ul>
+            </li>
+            <li><strong>What is the difference between Node.js and npm?</strong>
+                <p>Node.js is a JavaScript runtime environment, while npm is the package manager for Node.js, used to install and manage libraries and tools for Node.js.</p>
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+        <p>If you need more help, please contact:</p>
+        <ul>
+            <li>Customer Service Email: henrytalk.techpro@gmail.com</li>
+            <li>Official Website: <a href="https://nodejs.org/">Official Node.js Website</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作指南 - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index.html">返回使用手冊</a>
+            <a href="chapter2-operation-guide_en.html">English Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>第二章：操作流程指南</h1>
+
+        <div class="chapter-navigation">
+            <p>章節導航：</p>
+            <a href="chapter1-basic-settings.html">第1章：基本設定</a> |
+            <a href="chapter2-operation-guide.html">第2章：操作流程指南</a> |
+            <a href="chapter3-ai-models.html">第3章：AI模型設定</a>
+        </div>
+
+        <div class="content-section">
+            <h2>2.1 基本文字處理</h2>
+            <div class="image-section">
+                <img src="./images/text-processing.png" alt="文字處理流程截圖">
+                <p>圖2-1：文字處理流程示意圖</p>
+            </div>
+            
+            <div class="card-section">
+                <ol>
+                    <li>在緊鄰<b>[QRcode]</b>上方的對話框輸入要處理的文字
+                        <ul>
+                            <li>任意文檔擷取文字內容貼入對話框</li>
+                            <li>輸入錯誤可以使用 <b>[清空對話框]</b> 按鍵,重新輸入</li>
+                        </ul>
+                    </li>
+                    <li>選擇 AI 模型
+                        <ul>
+                            <li>選擇適合的模型類型,參考第3章 AI模型設定<a href="openrouter-api-key-guide_en.html">OpenRouter API金鑰指南</a></li>
+                            <li>確認 API 金鑰設定</li>
+                        </ul>
+                    </li>
+                    <li>設定<b>[心智圖層級]</b>
+                        <ul>
+                            <li>預設值：3 layers</li>
+                            <li>如果需要<b>原文摘要</b>,可以選擇 4 layers</li>
+                        </ul>
+                    </li>
+                    <li>選擇<b>[逐字稿模式]</b>來修改文法及段落標點, 或是取消逐字稿而使用<b>[心智圖模式]</b> 組織文字架構
+                        <ul>
+                            <li>如果輸入是歌詞, 請加選<b>[歌詞模式]</b></li>
+                        </ul>
+                    </li>
+                    <li>點擊 <b>[分析文本]</b> 開始處理
+                        <ul>
+                            <li>等待處理完成</li>
+                            <li>查看生成結果</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>2.1.1 基本文字處理功能展示</h3>
+            <div class="card-section">
+                <h4>範例：創新者特質分析</h4>
+                <p>以下是使用 Crystal Flow AI Media Analyzer 處理中英雙語文本的結果展示：</p>
+                <ul>
+                    <li>
+                        <a href="Example_001_Becoming_an_innovator_Traditional Chinese_Bilingual_3Layersmarkdown.html" target="_blank">
+                            思維導圖版本
+                        </a> 
+                            - 互動式心智圖，可展開/收合不同層級，支援內容選擇功能
+                    </li>
+                    <li>
+                        <a href="Example_001_Becoming_an_innovator_Traditional Chinese_Bilingual_3Layersmarkdown_md.html" target="_blank">
+                            Markdown 格式版本
+                        </a> 
+                            - 結構化文本展示，適合閱讀和複製
+                    </li>
+                </ul>
+                
+                <h5>功能特點：</h5>
+                <ul>
+                    <li>支援中英雙語內容並列顯示</li>
+                    <li>自動生成多層次結構化內容</li>
+                    <li>提供思維導圖與文本兩種呈現方式</li>
+                    <li>內建內容選擇與導出功能</li>
+                    <li>響應式設計，支援各種設備查看</li>
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h4>思維導圖控制功能說明
+                    <a href="Example_001_Becoming_an_innovator_Traditional Chinese_Bilingual_3Layersmarkdown.html" target="_blank"> 連結心智圖實例</a>
+                </h4>
+                <h5>右上角控制項：</h5>
+                <ul>
+                    <li>
+                        <strong>Level 選擇器</strong>：控制思維導圖的展開層級
+                        <ul>
+                            <li>Level 1：只顯示最上層主題</li>
+                            <li>Level 2：顯示到第二層子主題(預設)</li>
+                            <li>Level 3：顯示到第三層子主題</li>
+                            <li>Level 4：顯示到第四層子主題</li>
+                            <li>All：完整展開所有層級</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Save Checked Items</strong>：將已勾選的項目儲存為 Markdown 文件
+                    </li>
+                </ul>
+
+                <h5>右下角控制項：</h5>
+                <ul>
+                    <li>
+                        <strong>markmap 工具列</strong>：
+                        <ul>
+                            <li>➕ (放大)：放大視圖</li>
+                            <li>➖ (縮小)：縮小視圖</li>
+                            <li>(全螢幕)：切換全螢幕模式</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tips-section">
+                <p>使用建議：</p>
+                <ul>
+                    <li>初次查看時建議從 Level 2 開始，逐步展開更多層級</li>
+                    <li>可使用放大/縮小按鈕調整最佳觀看大小</li>
+                    <li>選取重要內容後可使用 Save Checked Items 功能保存</li>
+                    <li>全螢幕模式適合進行簡報或詳細研讀</li>
+                </ul>
+            </div>
+
+            <h2>2.2 影片處理流程</h2>
+            <div class="image-section">
+                <img src="./images/video-processing.png" alt="影片處理流程截圖">
+                <p>圖2-2：影片處理流程示意圖</p>
+            </div>
+            <ol>
+                <li>輸入影片 URL
+                    <ul>
+                        <li>支援 YouTube、Facebook 等平台</li>
+                        <li>確保影片連結可正常訪問</li>
+                    </ul>
+                </li>
+                <li>選擇是否需要下載字幕
+                    <ul>
+                        <li>自動檢測可用字幕</li>
+                        <li>選擇字幕語言</li>
+                    </ul>
+                </li>
+                <li>選擇處理語言
+                    <ul>
+                        <li>支援多種語言選項</li>
+                        <li>可選擇保持原始語言</li>
+                    </ul>
+                </li>
+                <li>等待下載和處理完成
+                    <ul>
+                        <li>觀察進度指示</li>
+                        <li>等待系統通知</li>
+                    </ul>
+                </li>
+                <li>查看生成的心智圖和文字摘要
+                    <ul>
+                        <li>等待<b>Markdown格式</b>及<b>心智圖格式</b>處理結果自動在瀏覽器中顯示</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h2>2.3 錄音功能使用</h2>
+            <div class="image-section">
+                <img src="./images/audio-recording.png" alt="錄音功能截圖">
+                <p>圖2-3：錄音功能操作介面</p>
+            </div>
+            <ol>
+                <li>設定錄音時間（預設 300 秒）
+                    <ul>
+                        <li>可自訂錄音時長</li>
+                        <li>注意系統資源限制</li>
+                    </ul>
+                </li>
+                <li>選擇錄音模式：
+                    <ul>
+                        <li>即時錄音：
+                            <ul>
+                                <li>直接轉換為文字</li>
+                                <li>適合快速處理</li>
+                            </ul>
+                        </li>
+                        <li>背景錄音：
+                            <ul>
+                                <li>儲存後再處理</li>
+                                <li>適合長時間錄製</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>開始/停止錄音
+                    <ul>
+                        <li>觀察錄音狀態指示</li>
+                        <li>注意剩餘時間顯示</li>
+                    </ul>
+                </li>
+                <li>等待處理完成
+                    <ul>
+                        <li>查看轉換進度</li>
+                        <li>確認輸出結果</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="tips-section">
+                <h3>實用提示</h3>
+                <ul>
+                    <li>處理前檢查：
+                        <ul>
+                            <li>確認網路連接穩定</li>
+                            <li>檢查系統音訊設定</li>
+                            <li>確保儲存空間充足</li>
+                        </ul>
+                    </li>
+                    <li>效能優化：
+                        <ul>
+                            <li>關閉不必要的應用程式</li>
+                            <li>避免同時進行多項處理</li>
+                            <li>定期清理暫存檔案</li>
+                        </ul>
+                    </li>
+                    <li>結果管理：
+                        <ul>
+                            <li>建立合適的檔案命名規則</li>
+                            <li>定期整理輸出檔案</li>
+                            <li>重要資料及時備份</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>如需更多協助，請聯繫：</p>
+        <ul>
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

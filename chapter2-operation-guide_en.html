@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Guide - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index_en.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index_en.html">Back to User Manual</a>
+            <a href="chapter2-operation-guide.html">Chinese Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Chapter 2: Operation Guide</h1>
+
+        <div class="chapter-navigation">
+            <p>Chapter Navigation:</p>
+            <a href="chapter1-basic-settings_en.html">Chapter 1: Basic Settings</a> |
+            <a href="chapter2-operation-guide_en.html">Chapter 2: Operation Guide</a> |
+            <a href="chapter3-ai-models_en.html">Chapter 3: AI Model Settings</a>
+        </div>
+
+        <div class="content-section">
+            <h2>2.1 Basic Text Processing</h2>
+            <div class="image-section">
+                <img src="./images/text-processing_en.png" alt="Text Processing Workflow Screenshot">
+                <p>Figure 2-1: Text Processing Workflow Diagram</p>
+            </div>
+            
+            <div class="card-section">
+                <ol>
+                    <li>Enter text to be processed in the dialog box above the <b>[QRcode]</b>
+                        <ul>
+                            <li>Extract text content from any document and paste into the dialog box</li>
+                            <li>Use <b>[Clear Dialog]</b> button to clear and re-enter if there are input errors</li>
+                        </ul>
+                    </li>
+                    <li>Select AI Model
+                        <ul>
+                            <li>Choose appropriate model type, refer to Chapter 3 AI Model Settings <a href="openrouter-api-key-guide_en.html">OpenRouter API Key Guide</a></li>
+                            <li>Confirm API key configuration</li>
+                        </ul>
+                    </li>
+                    <li>Set <b>[Mind Map Levels]</b>
+                        <ul>
+                            <li>Default: 3 layers</li>
+                            <li>Choose 4 layers if you need <b>original text summary</b></li>
+                        </ul>
+                    </li>
+                    <li>Choose <b>[Transcript Mode]</b> to modify grammar and paragraph punctuation, or cancel transcript to use <b>[Mind Map Mode]</b> for organizing text structure
+                        <ul>
+                            <li>If input is lyrics, please also select <b>[Lyrics Mode]</b></li>
+                        </ul>
+                    </li>
+                    <li>Click <b>[Analyze Text]</b> to start processing
+                        <ul>
+                            <li>Wait for processing to complete</li>
+                            <li>Review generated results</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>2.1.1 Basic Text Processing Feature Demo</h3>
+            <div class="card-section">
+                <h4>Example: Innovator Traits Analysis</h4>
+                <p>Below is a demonstration of using Crystal Flow AI Media Analyzer to process bilingual Chinese-English text:</p>
+                <ul>
+                    <li>
+                        <a href="Example_001_Becoming_an_innovator_Traditional Chinese_Bilingual_3Layersmarkdown.html" target="_blank">
+                            Mind Map Version
+                        </a> 
+                            - Interactive mind map with expandable/collapsible levels and content selection features
+                    </li>
+                    <li>
+                        <a href="Example_001_Becoming_an_innovator_Traditional Chinese_Bilingual_3Layersmarkdown_md.html" target="_blank">
+                            Markdown Format Version
+                        </a> 
+                            - Structured text display, suitable for reading and copying
+                    </li>
+                </ul>
+                
+                <h5>Feature Highlights:</h5>
+                <ul>
+                    <li>Supports bilingual Chinese-English content side-by-side display</li>
+                    <li>Automatically generates multi-level structured content</li>
+                    <li>Provides both mind map and text presentation formats</li>
+                    <li>Built-in content selection and export functionality</li>
+                    <li>Responsive design supporting various device viewing</li>
+                </ul>
+            </div>
+
+            <div class="card-section">
+                <h4>Mind Map Control Features
+                    <a href="Example_001_Becoming_an_innovator_Traditional Chinese_Bilingual_3Layersmarkdown.html" target="_blank"> Link to Mind Map Example</a>
+                </h4>
+                <h5>Top-right Controls:</h5>
+                <ul>
+                    <li>
+                        <strong>Level Selector</strong>: Controls the expansion level of the mind map
+                        <ul>
+                            <li>Level 1: Shows only top-level topics</li>
+                            <li>Level 2: Shows up to second-level subtopics (default)</li>
+                            <li>Level 3: Shows up to third-level subtopics</li>
+                            <li>Level 4: Shows up to fourth-level subtopics</li>
+                            <li>All: Fully expands all levels</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Save Checked Items</strong>: Saves checked items as Markdown file
+                    </li>
+                </ul>
+
+                <h5>Bottom-right Controls:</h5>
+                <ul>
+                    <li>
+                        <strong>markmap Toolbar</strong>:
+                        <ul>
+                            <li>➕ (Zoom In): Enlarge view</li>
+                            <li>➖ (Zoom Out): Reduce view</li>
+                            <li>(Fullscreen): Toggle fullscreen mode</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tips-section">
+                <p>Usage Tips:</p>
+                <ul>
+                    <li>For first-time viewing, start with Level 2 and gradually expand more levels</li>
+                    <li>Use zoom in/out buttons to adjust optimal viewing size</li>
+                    <li>After selecting important content, use Save Checked Items feature to save</li>
+                    <li>Fullscreen mode is suitable for presentations or detailed study</li>
+                </ul>
+            </div>
+
+            <h2>2.2 Video Processing Workflow</h2>
+            <div class="image-section">
+                <img src="./images/video-processing_en.png" alt="Video Processing Workflow Screenshot">
+                <p>Figure 2-2: Video Processing Workflow Diagram</p>
+            </div>
+            <ol>
+                <li>Enter Video URL
+                    <ul>
+                        <li>Supports YouTube, Facebook and other platforms</li>
+                        <li>Ensure video link is accessible</li>
+                    </ul>
+                </li>
+                <li>Choose whether to download subtitles
+                    <ul>
+                        <li>Automatically detects available subtitles</li>
+                        <li>Select subtitle language</li>
+                    </ul>
+                </li>
+                <li>Select processing language
+                    <ul>
+                        <li>Supports multiple language options</li>
+                        <li>Can choose to maintain original language</li>
+                    </ul>
+                </li>
+                <li>Wait for download and processing to complete
+                    <ul>
+                        <li>Monitor progress indicators</li>
+                        <li>Wait for system notifications</li>
+                    </ul>
+                </li>
+                <li>View generated mind map and text summary
+                    <ul>
+                        <li>Wait for <b>Markdown format</b> and <b>mind map format</b> processing results to automatically display in browser</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h2>2.3 Audio Recording Function Usage</h2>
+            <div class="image-section">
+                <img src="./images/audio-recording.png" alt="Audio Recording Function Screenshot">
+                <p>Figure 2-3: Audio Recording Operation Interface</p>
+            </div>
+            <ol>
+                <li>Set recording time (default 300 seconds)
+                    <ul>
+                        <li>Can customize recording duration</li>
+                        <li>Note system resource limitations</li>
+                    </ul>
+                </li>
+                <li>Choose recording mode:
+                    <ul>
+                        <li>Real-time recording:
+                            <ul>
+                                <li>Direct conversion to text</li>
+                                <li>Suitable for quick processing</li>
+                            </ul>
+                        </li>
+                        <li>Background recording:
+                            <ul>
+                                <li>Save first, then process</li>
+                                <li>Suitable for long-term recording</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Start/Stop recording
+                    <ul>
+                        <li>Observe recording status indicators</li>
+                        <li>Note remaining time display</li>
+                    </ul>
+                </li>
+                <li>Wait for processing to complete
+                    <ul>
+                        <li>Check conversion progress</li>
+                        <li>Confirm output results</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="tips-section">
+                <h3>Practical Tips</h3>
+                <ul>
+                    <li>Pre-processing checks:
+                        <ul>
+                            <li>Ensure stable network connection</li>
+                            <li>Check system audio settings</li>
+                            <li>Ensure sufficient storage space</li>
+                        </ul>
+                    </li>
+                    <li>Performance optimization:
+                        <ul>
+                            <li>Close unnecessary applications</li>
+                            <li>Avoid simultaneous multiple processing tasks</li>
+                            <li>Regularly clean temporary files</li>
+                        </ul>
+                    </li>
+                    <li>Result management:
+                        <ul>
+                            <li>Establish appropriate file naming conventions</li>
+                            <li>Regularly organize output files</li>
+                            <li>Backup important data promptly</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>For more assistance, please contact:</p>
+        <ul>
+            <li>Customer Service Email: henrytalk.techpro@gmail.com</li>
+            <li>Official Website: <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">Visit Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

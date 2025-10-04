@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crystal Flow AI Media Analyzer User Manual</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="alternate" href="index_en.html" hreflang="en" title="Crystal Flow AI Media Analyzer User Manual">
+    </head>
+    <!-- End of Selection -->
+    <body>
+        <header>
+            <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">
+                <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 10%; height: auto; display: block; margin: 0 auto;">
+            </a>
+            <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+                <a href="#overview">Overview</a>
+                <a href="#requirements">System Requirements</a>
+                <a href="#features">Features</a>
+                <a href="#guide">User Guide</a>
+                <a href="#faq">FAQ</a>
+                <a href="Installation_menu.html">Chinese Version</a>
+            </nav>
+        </header>
+
+    <main>
+        <h1>Crystal Flow AI Media Analyzer User Manual</h1>
+
+        <h2 id="overview">1. Overview</h2>
+        <p>Crystal Flow AI Media Analyzer is an intelligent tool designed for analyzing multimedia data. It supports processing various formats of digital content, including YouTube videos, audio files, documents (TXT, PDF, PPT, EXL, Word, etc.), and helps users efficiently analyze and manage information through mind maps, transcripts, and bilingual translations.</p>
+
+        <h2 id="requirements">2. System Requirements</h2>
+        <ul>
+            <li>Operating System: Windows 10 or higher</li>
+            <li>Hardware Requirements:
+                <ul>
+                    <li>Minimum: Dual-core CPU, 4GB RAM</li>
+                    <li>Recommended: Quad-core CPU, 8GB RAM, NVIDIA GPU (CUDA support, optional)</li>
+                </ul>
+            </li>
+            <li>Required Software:
+                <ul>
+                    <li><a href="node-install-guide_en.html">Node.js Installation Guide</a></li>
+                    <li>Markdown File Reader: VSCode or browser plugins (Chrome, Microsoft Edge)</li>
+                    <li>ffmpeg: Open-source plugin, automatically downloaded by the program</li>
+                    <li><a href="openai-api-key-guide_en.html">OpenAI API Key Guide</a></li>
+                    <li><a href="openrouter-api-key-guide_en.html">OpenRouter API Key Guide</a></li>
+                    <li><a href="lmstudio-guide_en.html">LM Studio Installation Guide</a></li>
+                    <li><a href="ollama-install-guide_en.html">Ollama Installation Guide</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 id="features">3. Features</h2>
+        <h3>a. Dual User Interface Support</h3>
+        <ul>
+            <li><strong>Windows User Interface</strong>
+                <ul>
+                    <li>Provides complete multimedia analysis functionality, designed for processing multimedia information on PC.</li>
+                    <li>Supports processing audio, video, documents, and mind map generation.</li>
+                </ul>
+            </li>
+            <li><strong>Web Interface</strong>
+                <ul>
+                    <li>Supports quick data upload to PC via QR Code scanning from mobile devices.</li>
+                    <li>Users can check progress directly on mobile and seamlessly collaborate with PC tools.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>b. Online Multimedia Knowledge Analysis</h3>
+        <ul>
+            <li>Supports Multiple Sources and Formats
+                <ul>
+                    <li>YouTube: Automatically processes public or private video content, extracts subtitles for analysis.
+                        <ul>
+                            <li>Use Cases: Academic course notes, technical demonstration summaries.</li>
+                        </ul>
+                    </li>
+                    <li>Facebook Videos: Processes shared links, converts video content into visualized data.
+                        <ul>
+                            <li>Use Cases: Meeting records, brand advertising analysis.</li>
+                        </ul>
+                    </li>
+                    <li>Any URL: Supports parsing digital articles (news, newsletters, Wikipedia).
+                        <ul>
+                            <li>Use Cases: Research core content extraction.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Video Subtitle Download and Translation
+                <ul>
+                    <li>Automatically extracts subtitles from YouTube and Facebook.</li>
+                    <li>Provides multi-language translation, exports to TXT and Markdown (MD) files.</li>
+                    <li>Can generate HTML format mind maps for browser viewing.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>c. Text and Image Processing</h3>
+        <ul>
+            <li>Text Processing
+                <ul>
+                    <li>Supports content extraction from PDF, PPT, Word, and Excel files, converts to Markdown format.
+                        <ul>
+                            <li>Use Cases: Academic research organization, business report preparation.</li>
+                        </ul>
+                    </li>
+                    <li>Accurately preserves tables, paragraphs, and heading layouts.</li>
+                    <li>Users can directly generate mind maps or perform multi-language translations.</li>
+                </ul>
+            </li>
+            <li>Image Processing
+                <ul>
+                    <li>Supports jpg, jpeg, png, bmp, heic, webp formats.</li>
+                    <li>Extracts text from images or scanned documents, converts to Markdown format.
+                        <ul>
+                            <li>Use Cases: Handwritten note digitization, image text analysis.</li>
+                        </ul>
+                    </li>
+                    <li>Integrates with Google Lens/Microsoft Lens for quick scanning and text conversion.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>d. Local Audio and MP3 Music Processing</h3>
+        <ul>
+            <li>Supports MP3, M4A, ACC, and WAV formats.</li>
+            <li>Extracts lyrics and provides bilingual translations.
+                <ul>
+                    <li>Use Cases: Song translation learning, music data organization.</li>
+                </ul>
+            </li>
+            <li>Generates Markdown format transcripts using speech-to-text technology.</li>
+            <li>Can create mind maps from transcripts or lyrics structure.</li>
+        </ul>
+
+        <h3>e. PC Recording Function</h3>
+        <ul>
+            <li>Real-time audio recording and processing, supports automatic transcript generation.
+                <ul>
+                    <li>Use Cases: Meeting recording analysis, speech transcript generation.</li>
+                </ul>
+            </li>
+            <li>Customizable recording duration, background recording, and timestamp marking.</li>
+        </ul>
+
+        <h3>f. Mind Map Generation</h3>
+        <ul>
+            <li>Customizable depth levels and structured presentation.
+                <ul>
+                    <li>Use Cases: Academic research, meeting records, creative thinking.</li>
+                </ul>
+            </li>
+            <li>Combines GPT analysis with multi-language support.</li>
+        </ul>
+
+        <h3>g. Bilingual Translation and Text-to-Speech</h3>
+        <ul>
+            <li>Supports multi-language translation and bilingual parallel output.
+                <ul>
+                    <li>Use Cases: International conference material preparation, multilingual learning assistance.</li>
+                </ul>
+            </li>
+            <li>Provides text-to-speech functionality with adjustable speed, tone, and voice style.</li>
+            <li>Exports to Markdown, TXT, or PDF files.</li>
+        </ul>
+
+        <h2 id="guide">5. User Guide</h2>
+        <h3>Initial Setup</h3>
+        <ul>
+            <li>Enter a valid OpenAI API Key after launching the software.</li>
+            <li>Ensure NVIDIA drivers are installed (if GPU acceleration is enabled).</li>
+            <li>Register email in Google Sheets to activate trial period.</li>
+        </ul>
+
+        <h3>Core Feature Usage</h3>
+        <ul>
+            <li>Analyze YouTube or URL: Paste video link into the "Enter Media URL" field.</li>
+            <li>Select subtitle language for download.</li>
+            <li>Click "Analyze Text" button.</li>
+        </ul>
+
+        <h3>Mind Map Generation</h3>
+        <ul>
+            <li>Choose mind map depth levels.</li>
+            <li>Click "Analyze Text", generated mind map saves automatically.</li>
+        </ul>
+
+        <h3>Recording and Transcript Generation</h3>
+        <ul>
+            <li>Click the record button to start recording.</li>
+            <li>Transcript generates automatically after recording completion.</li>
+        </ul>
+
+        <h2>6. Advanced Features</h2>
+        <ul>
+            <li>Multi-language parsing and translation support.</li>
+            <li>Dynamic segmentation processing and token count adjustment.</li>
+            <li>Interaction with GPT-4o-mini.</li>
+        </ul>
+
+        <h2>7. Licensing and Trial Period</h2>
+        <h3>Trial Process</h3>
+        <ul>
+            <li>Send email to henrytalk.techpro@gmail.com to request trial.</li>
+            <li>Get trial registration code from reply email.</li>
+            <li>Enter trial account and registration code in login field to start trial.</li>
+        </ul>
+
+        <h3>License Models</h3>
+        <ul>
+            <li>Free Trial: No feature limitations within 30 days.</li>
+            <li>Full License: Lifetime usage rights after purchase.</li>
+        </ul>
+
+        <h2 id="faq">8. Frequently Asked Questions (FAQ)</h2>
+        <ol>
+            <li>Buttons not clickable?
+                <ul>
+                    <li>Check if email is registered and authorized.</li>
+                </ul>
+            </li>
+            <li>Mind map too simplified?
+                <ul>
+                    <li>Reduce token count or increase depth levels.</li>
+                </ul>
+            </li>
+            <li>Recording function not working?
+                <ul>
+                    <li>Check microphone connection and system settings.</li>
+                </ul>
+            </li>
+            <li>How to export results?
+                <ul>
+                    <li>Use Markdown editor or extensions to view generated files.</li>
+                </ul>
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+        <p>For more assistance, please contact:</p>
+        <ul>
+            <li>Customer Service: henrytalk.techpro@gmail.com</li>
+            <li>Official Website: <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">Visit Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

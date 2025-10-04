@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Knowledge-Enhanced Q&A Features - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index_en.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 100px; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="index_en.html" style="color: white; text-decoration: none; margin: 0 15px;">Back to User Manual</a>
+            <a href="chapter11-rag.html" style="color: white; text-decoration: none; margin: 0 15px;">Chinese Version</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>Chapter 11: RAG Knowledge-Enhanced Q&A Features</h1>
+
+        <div class="chapter-navigation" style="margin: 20px 0; padding: 10px; background-color: #f5f5f5; border-radius: 5px;">
+            <p>Chapter Navigation:</p>
+            <a href="chapter10-file-server_en.html">Chapter 10: Home File Server</a> |
+            <a href="chapter11-rag_en.html">Chapter 11: RAG Knowledge-Enhanced Q&A</a> |
+            <a href="chapter12-media-download_en.html">Chapter 12: Media Download Features</a>
+        </div>
+
+        <div class="content-section">
+            <h2>11.1 RAG Feature Overview</h2>
+            <div class="overview-section" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/rag-overview.png" alt="RAG Feature Overview" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">Figure 11-1: RAG Feature Overview</p>
+                </div>
+
+                <div class="features-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>Basic Principles</h3>
+                    <ul>
+                        <li>Knowledge Base Creation:
+                            <ul>
+                                <li>Use LM Studio's embedding model for vectorization</li>
+                                <li>Automatically process and store document content</li>
+                                <li>Build high-performance vector database</li>
+                            </ul>
+                        </li>
+                        <li>Intelligent Retrieval:
+                            <ul>
+                                <li>Automatically find the most relevant 5 pieces of information</li>
+                                <li>Combine with AI model for analysis</li>
+                                <li>Provide more accurate answers</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>11.2 Supported Data Sources</h2>
+            <div class="data-sources" style="margin: 20px 0;">
+                <div class="sources-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="source-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Online Media</h3>
+                        <div class="image-section">
+                            <img src="./images/online-media-sources.png" alt="Online Media Sources" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>YouTube Videos:
+                                <ul>
+                                    <li>Automatically transcribe video content</li>
+                                    <li>Process subtitle information</li>
+                                    <li>Analyze video topics</li>
+                                </ul>
+                            </li>
+                            <li>Other Video Platforms:
+                                <ul>
+                                    <li>Facebook videos</li>
+                                    <li>Online course content</li>
+                                    <li>Webinar materials</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="source-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Local Documents</h3>
+                        <div class="image-section">
+                            <img src="./images/local-document-sources.png" alt="Local Document Sources" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Document Types:
+                                <ul>
+                                    <li>PDF documents</li>
+                                    <li>Word documents</li>
+                                    <li>PowerPoint presentations</li>
+                                    <li>Plain text files</li>
+                                </ul>
+                            </li>
+                            <li>Audio Files:
+                                <ul>
+                                    <li>Recording files</li>
+                                    <li>Voice memos</li>
+                                    <li>Meeting records</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>11.3 Usage Methods</h2>
+            <div class="usage-guide" style="margin: 20px 0;">
+                <div class="guide-sections">
+                    <div class="section-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px; margin-bottom: 20px;">
+                        <h3>Knowledge Base Creation</h3>
+                        <div class="image-section">
+                            <img src="./images/knowledge-base-creation.png" alt="Knowledge Base Creation Process" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Data Processing Workflow:
+                                <ul>
+                                    <li>Upload or input URL</li>
+                                    <li>System automatically converts text</li>
+                                    <li>Vectorize and store</li>
+                                </ul>
+                            </li>
+                            <li>Automatic Updates:
+                                <ul>
+                                    <li>New data automatically processed</li>
+                                    <li>Real-time knowledge base updates</li>
+                                    <li>Keep data current</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Q&A Operations</h3>
+                        <div class="image-section">
+                            <img src="./images/qa-operation.png" alt="Q&A Operation Interface" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>General Conversation:
+                                <ul>
+                                    <li>Enter questions directly in chat box</li>
+                                    <li>Press Enter to send (without using RAG)</li>
+                                    <li>Get general AI responses</li>
+                                </ul>
+                            </li>
+                            <li>RAG Enhanced Responses:
+                                <ul>
+                                    <li>Enter question and click RAG button</li>
+                                    <li>System automatically retrieves relevant information</li>
+                                    <li>Combine knowledge base content for answers</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>11.4 Application Scenarios</h2>
+            <div class="applications" style="margin: 20px 0;">
+                <div class="scenarios-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Learning & Research</h3>
+                        <div class="image-section">
+                            <img src="./images/learning-research.png" alt="Learning Research Applications" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Course Content Understanding:
+                                <ul>
+                                    <li>Organize course highlights</li>
+                                    <li>Answer course-related questions</li>
+                                    <li>Deepen understanding of learning materials</li>
+                                </ul>
+                            </li>
+                            <li>Research Data Analysis:
+                                <ul>
+                                    <li>Literature review assistance</li>
+                                    <li>Research direction suggestions</li>
+                                    <li>Related research retrieval</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Professional Applications</h3>
+                        <div class="image-section">
+                            <img src="./images/professional-applications.png" alt="Professional Application Scenarios" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Meeting Record Analysis:
+                                <ul>
+                                    <li>Track important decisions</li>
+                                    <li>Query meeting highlights</li>
+                                    <li>Review project progress</li>
+                                </ul>
+                            </li>
+                            <li>Knowledge Management:
+                                <ul>
+                                    <li>Enterprise document retrieval</li>
+                                    <li>Professional knowledge Q&A</li>
+                                    <li>Experience sharing and inheritance</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>11.5 Usage Recommendations</h2>
+            <div class="recommendations" style="margin: 20px 0;">
+                <div class="tips-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="tip-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Performance Optimization</h3>
+                        <div class="image-section">
+                            <img src="./images/performance-optimization.png" alt="Performance Optimization Recommendations" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Data Management:
+                                <ul>
+                                    <li>Regularly organize knowledge base</li>
+                                    <li>Remove outdated data</li>
+                                    <li>Maintain data relevance</li>
+                                </ul>
+                            </li>
+                            <li>Query Techniques:
+                                <ul>
+                                    <li>Use precise keywords</li>
+                                    <li>Provide sufficient context</li>
+                                    <li>Use RAG function appropriately</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>Best Practices</h3>
+                        <div class="image-section">
+                            <img src="./images/best-practices.png" alt="Best Practice Recommendations" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>Data Quality:
+                                <ul>
+                                    <li>Ensure accuracy of source data</li>
+                                    <li>Maintain data integrity</li>
+                                    <li>Appropriate categorization</li>
+                                </ul>
+                            </li>
+                            <li>Usage Timing:
+                                <ul>
+                                    <li>When professional domain knowledge is needed</li>
+                                    <li>When verifying specific information</li>
+                                    <li>When conducting in-depth analysis</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f5f5f5;">
+        <p>For more assistance, please contact:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>Customer Service Email: henrytalk.techpro@gmail.com</li>
+            <li>Official Website: <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">Visit Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

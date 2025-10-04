@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手機遠端控制功能 - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 100px; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="index.html" style="color: white; text-decoration: none; margin: 0 15px;">返回使用手冊</a>
+            <a href="chapter9-remote-control_en.html" style="color: white; text-decoration: none; margin: 0 15px;">English Version</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>第九章：手機遠端控制功能</h1>
+
+        <div class="chapter-navigation" style="margin: 20px 0; padding: 10px; background-color: #f5f5f5; border-radius: 5px;">
+            <p>章節導航：</p>
+            <a href="chapter8-network-processing.html">第8章：網路媒體轉換</a> |
+            <a href="chapter9-remote-control.html">第9章：手機遠端控制</a> |
+            <a href="chapter10-file-server.html">第10章：家庭檔案伺服器</a>
+        </div>
+
+        <div class="content-section">
+            <h2>9.1 連線設定</h2>
+            <div class="connection-setup" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/qr-code-connection.png" alt="QR Code連線示意圖" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">圖9-1：QR Code連線介面</p>
+                </div>
+
+                <div class="setup-details" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>連線方式</h3>
+                    <div class="image-section">
+                        <img src="./images/connection-methods.png" alt="連線方式說明" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    </div>
+                    <ul>
+                        <li>掃描 QR Code 連接
+                            <ul>
+                                <li>程式啟動時會顯示 QR Code</li>
+                                <li>支援 HTTP 和 HTTPS 兩種連線方式</li>
+                                <li>建議使用同一個區域網路（WiFi）</li>
+                            </ul>
+                        </li>
+                        <li>連接埠：
+                            <ul>
+                                <li>HTTP：預設 11435 埠</li>
+                                <li>HTTPS：預設 11798 埠（HTTP 埠 + 363）</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>9.2 手機端功能</h2>
+            <div class="mobile-features" style="margin: 20px 0;">
+                <div class="features-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="feature-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>媒體上傳</h3>
+                        <div class="image-section">
+                            <img src="./images/media-upload.png" alt="媒體上傳功能" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>即時錄音
+                                <ul>
+                                    <li>直接用手機錄音</li>
+                                    <li>自動上傳至電腦處理</li>
+                                    <li>支援長時間錄音</li>
+                                </ul>
+                            </li>
+                            <li>拍照上傳
+                                <ul>
+                                    <li>拍攝文件或圖片</li>
+                                    <li>自動進行文字辨識</li>
+                                    <li>支援多頁拍攝</li>
+                                </ul>
+                            </li>
+                            <li>文件掃描
+                                <ul>
+                                    <li>類似掃描器功能</li>
+                                    <li>自動調整角度和對比度</li>
+                                    <li>適合文件數位化</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>遠端控制</h3>
+                        <div class="image-section">
+                            <img src="./images/remote-control.png" alt="遠端控制功能" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                        </div>
+                        <ul>
+                            <li>檔案處理
+                                <ul>
+                                    <li>選擇處理語言</li>
+                                    <li>設定輸出格式</li>
+                                    <li>啟動分析流程</li>
+                                </ul>
+                            </li>
+                            <li>即時監控
+                                <ul>
+                                    <li>查看處理進度</li>
+                                    <li>預覽處理結果</li>
+                                    <li>下載完成檔案</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>9.3 實用場景</h2>
+            <div class="usage-scenarios" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/usage-scenarios.png" alt="實用場景示例" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">圖9-2：實用場景展示</p>
+                </div>
+
+                <div class="scenarios-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>會議記錄</h3>
+                        <ul>
+                            <li>用手機錄音，自動轉為逐字稿</li>
+                            <li>拍攝簡報，即時生成摘要</li>
+                            <li>快速整理會議重點</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>文件處理</h3>
+                        <ul>
+                            <li>拍攝紙本文件自動數位化</li>
+                            <li>批次處理多頁文件</li>
+                            <li>即時生成文件摘要</li>
+                        </ul>
+                    </div>
+
+                    <div class="scenario-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>學習輔助</h3>
+                        <ul>
+                            <li>課堂錄音自動轉錄</li>
+                            <li>拍攝黑板內容生成筆記</li>
+                            <li>快速製作學習重點</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>9.4 使用建議</h2>
+            <div class="usage-tips" style="margin: 20px 0;">
+                <div class="tips-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                    <div class="tip-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>網路設定</h3>
+                        <ul>
+                            <li>確保手機和電腦在同一網路</li>
+                            <li>檢查防火牆設定</li>
+                            <li>優先使用 HTTPS 連線</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>效能優化</h3>
+                        <ul>
+                            <li>大檔案建議使用 WiFi 上傳</li>
+                            <li>避免同時上傳過多檔案</li>
+                            <li>定期清理暫存檔案</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                        <h3>安全建議</h3>
+                        <ul>
+                            <li>僅在可信任的網路使用</li>
+                            <li>完成使用後關閉連線</li>
+                            <li>定期更新程式版本</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>9.5 常見問題解決</h2>
+            <div class="troubleshooting" style="margin: 20px 0;">
+                <div class="image-section">
+                    <img src="./images/troubleshooting-guide.png" alt="常見問題解決指南" style="max-width: 100%; height: auto; border: 1px solid #ddd;">
+                    <p style="text-align: center; color: #666;">圖9-3：常見問題解決指南</p>
+                </div>
+
+                <div class="problems-section" style="padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+                    <h3>連線問題</h3>
+                    <ul>
+                        <li>無法掃描 QR Code
+                            <ul>
+                                <li>確認相機權限</li>
+                                <li>檢查 QR Code 清晰度</li>
+                                <li>嘗試手動輸入網址</li>
+                            </ul>
+                        </li>
+                        <li>連線失敗
+                            <ul>
+                                <li>確認網路連接</li>
+                                <li>檢查防火牆設定</li>
+                                <li>確認端口是否開放</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>上傳問題</h3>
+                    <ul>
+                        <li>檔案上傳失敗
+                            <ul>
+                                <li>檢查檔案大小</li>
+                                <li>確認網路穩定性</li>
+                                <li>重試上傳程序</li>
+                            </ul>
+                        </li>
+                        <li>處理速度慢
+                            <ul>
+                                <li>檢查網路速度</li>
+                                <li>確認系統資源</li>
+                                <li>考慮分批處理</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f5f5f5;">
+        <p>如需更多協助，請聯繫：</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>客服信箱：henrytalk.techpro@gmail.com</li>
+            <li>官方網站：<a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">訪問我們</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 

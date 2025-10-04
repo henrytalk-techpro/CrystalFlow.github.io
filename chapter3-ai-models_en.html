@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Settings and Selection - Crystal Flow AI Media Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index_en.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index_en.html">Back to User Manual</a>
+            <a href="chapter3-ai-models.html">Chinese Version</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Chapter 3: AI Model Settings and Selection</h1>
+
+        <div class="chapter-navigation">
+            <p>Chapter Navigation:</p>
+            <a href="chapter2-operation-guide_en.html">Chapter 2: Operation Guide</a> |
+            <a href="chapter3-ai-models_en.html">Chapter 3: AI Model Settings</a> |
+            <a href="chapter4-whisper_en.html">Chapter 4: Whisper Settings</a>
+        </div>
+
+        <div class="content-section">
+            <h2>3.1 Supported AI Model Types</h2>
+            <div class="image-section">
+                <img src="./images/ai-models-overview.png" alt="AI Models Overview">
+                <p>Figure 3-1: Supported AI Models Overview</p>
+            </div>
+
+            <h3>OpenRouter Models</h3>
+            <div class="model-section">
+                <h4>Google Gemini Series</h4>
+                <div class="image-section">
+                    <img src="./images/gemini-models.png" alt="Gemini Model Settings Interface">
+                    <p>Figure 3-2: Gemini Model Settings Interface</p>
+                </div>
+                <ul>
+                    <li>gemini-2.0-flash-lite-001
+                        <ul>
+                            <li>Lightweight fast version</li>
+                            <li>Suitable for general text processing</li>
+                            <li>Fast response time</li>
+                        </ul>
+                    </li>
+                    <li>gemini-2.0-flash-001
+                        <ul>
+                            <li>Standard version</li>
+                            <li>Balanced performance and accuracy</li>
+                        </ul>
+                    </li>
+                    <li>gemini-flash-1.5
+                        <ul>
+                            <li>Version 1.5</li>
+                            <li>High stability</li>
+                        </ul>
+                    </li>
+                    <li>gemini-flash-1.5-8b
+                        <ul>
+                            <li>8B parameter version</li>
+                            <li>Suitable for lightweight applications</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>OpenAI Series</h4>
+                <div class="image-section">
+                    <img src="./images/openai-models.png" alt="OpenAI Model Settings Interface">
+                    <p>Figure 3-3: OpenAI Model Settings Interface</p>
+                </div>
+                <ul>
+                    <li>gpt-4o-mini
+                        <ul>
+                            <li>GPT-4 lightweight version</li>
+                            <li>Suitable for general conversation and text analysis</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Deepseek Series</h4>
+                <div class="image-section">
+                    <img src="./images/deepseek-models.png" alt="Deepseek Model Settings Interface">
+                    <p>Figure 3-4: Deepseek Model Settings Interface</p>
+                </div>
+                <ul>
+                    <li>deepseek-r1:free
+                        <ul>
+                            <li>Free version</li>
+                            <li>Suitable for general use</li>
+                        </ul>
+                    </li>
+                    <li>deepseek-chat:free
+                        <ul>
+                            <li>Chat-specific version</li>
+                            <li>Optimized for conversation experience</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>LM Studio Local Models</h3>
+            <div class="model-section">
+                <div class="image-section">
+                    <img src="./images/lmstudio-models.png" alt="LM Studio Model Settings Interface">
+                    <p>Figure 3-5: LM Studio Model Settings Interface</p>
+                </div>
+                <h4>Vision Language Models</h4>
+                <ul>
+                    <li>llava-llama-3-8b-v1_1
+                        <ul>
+                            <li>Supports image understanding</li>
+                            <li>Suitable for mixed image-text processing</li>
+                        </ul>
+                    </li>
+                    <li>llava-v1.5-7b
+                        <ul>
+                            <li>Upgraded vision model</li>
+                            <li>Better image understanding capabilities</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Professional Models</h4>
+                <ul>
+                    <li>glm-4-9b-chat-abliterated
+                        <ul>
+                            <li>General conversation model</li>
+                            <li>Suitable for various scenarios</li>
+                        </ul>
+                    </li>
+                    <li>deepseek-coder-v2-lite-instruct
+                        <ul>
+                            <li>Code processing specialized</li>
+                            <li>Suitable for technical documentation processing</li>
+                        </ul>
+                    </li>
+                    <li>deepseek-r1-distill-qwen-7b
+                        <ul>
+                            <li>Knowledge distillation version</li>
+                            <li>Balanced performance and accuracy</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>3.2 Model Selection Recommendations</h2>
+            <div class="card-section">
+                <h3>General Text Processing</h3>
+                <ul>
+                    <li>Recommended: gemini-2.0-flash-lite-001
+                        <ul>
+                            <li>Fast processing speed</li>
+                            <li>Low resource consumption</li>
+                            <li>Suitable for: Daily document processing, simple translation</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Professional Content Analysis</h3>
+                <ul>
+                    <li>Recommended: gpt-4o-mini or deepseek-r1
+                        <ul>
+                            <li>Strong understanding capability</li>
+                            <li>More professional responses</li>
+                            <li>Suitable for: Academic research, professional reports</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Code Processing</h3>
+                <ul>
+                    <li>Recommended: deepseek-coder-v2-lite-instruct
+                        <ul>
+                            <li>Specialized optimization for code understanding and generation</li>
+                            <li>Suitable for: Code analysis, technical documentation</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Mixed Image-Text Processing</h3>
+                <ul>
+                    <li>Recommended: llava-llama3 or llava-v1.5-7b
+                        <ul>
+                            <li>Can process images and text simultaneously</li>
+                            <li>Suitable for: Image-text reports, multimedia content analysis</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>3.3 Model Usage Considerations</h2>
+            <div class="notice-section">
+                <h3>System Resource Considerations</h3>
+                <ul>
+                    <li>Local models require more memory</li>
+                    <li>Cloud models require stable internet connection</li>
+                    <li>Recommend choosing appropriate models based on computer configuration</li>
+                </ul>
+
+                <h3>Usage Costs</h3>
+                <ul>
+                    <li>OpenRouter models may require additional fees</li>
+                    <li>Local models are one-time download</li>
+                    <li>Recommend testing with free versions first</li>
+                </ul>
+
+                <h3>Performance Optimization</h3>
+                <ul>
+                    <li>Can switch between different models to compare effects</li>
+                    <li>Supports hot-swapping of models</li>
+                    <li>Recommend keeping model versions updated</li>
+                </ul>
+            </div>
+
+            <div id="mindmap">
+                <h2>3.4 Bilingual Mind Map Settings</h2>
+                <div class="image-section">
+                    <img src="./images/mindmap-settings.png" alt="Mind Map Settings Interface">
+                </div>
+                
+                <div class="card-section">
+                    <h3>Core Features</h3>
+                    <ul>
+                        <li>Bilingual Side-by-Side Display:
+                            <ul>
+                                <li>Perfect Chinese-English comparison</li>
+                                <li>Automatic layout adjustment</li>
+                                <li>Supports other language combinations</li>
+                            </ul>
+                        </li>
+                        <li>Customization Options:
+                            <ul>
+                                <li>Adjustable mind map levels (default 3 levels)</li>
+                                <li>Custom node expansion methods</li>
+                                <li>Flexible color theme settings</li>
+                            </ul>
+                        </li>
+                        <li>Multiple Output Formats:
+                            <ul>
+                                <li>HTML interactive viewing</li>
+                                <li>PNG/SVG image export</li>
+                                <li>PDF document output</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>Usage Recommendations</h3>
+                    <ul>
+                        <li>Academic Research: Set 4-5 levels depth for complete research structure presentation</li>
+                        <li>Course Notes: Use 3-level structure to highlight key concepts</li>
+                        <li>Meeting Records: 2-3 levels most suitable for quick grasp of main points</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>For more assistance, please contact:</p>
+        <ul>
+            <li>Customer Service Email: henrytalk.techpro@gmail.com</li>
+            <li>Official Website: <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">Visit Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

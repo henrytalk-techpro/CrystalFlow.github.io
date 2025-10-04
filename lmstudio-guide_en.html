@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Studio Installation and Setup Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="alternate" href="lmstudio-guide.html" hreflang="zh-Hant" title="LM Studio 安裝與設定指南">
+</head>
+<body>
+    <header>
+        <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">
+            <img src="./images/CrystalFlow.png" alt="Crystal Flow Logo" class="logo" style="max-width: 10%; height: auto; display: block; margin: 0 auto;">
+        </a>
+        <nav style="text-align: center; background-color: #2F3B44; padding: 15px 0; margin-top: 20px;">
+            <a href="#introduction">Introduction</a>
+            <a href="#requirements">System Requirements</a>
+            <a href="#installation">Installation Steps</a>
+            <a href="#setup">Model Setup</a>
+            <a href="#verification">Verification</a>
+            <a href="#troubleshooting">Troubleshooting</a>
+            <a href="#advanced">Advanced Config</a>
+            <a href="lmstudio-guide.html">Chinese Version</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1>LM Studio Installation and Setup Guide</h1>
+
+        <h2 id="introduction">1. Introduction to LM Studio</h2>
+        <p>LM Studio is a powerful local AI model management tool that allows you to run various AI models on your local machine without relying on cloud services. Key features include:</p>
+        <ul>
+            <li>Support for multiple AI models</li>
+            <li>Local API service provision</li>
+            <li>User-friendly interface</li>
+            <li>GPU acceleration support</li>
+        </ul>
+
+        <h2 id="requirements">2. System Requirements</h2>
+        <ul>
+            <li>Operating System: Windows 10/11, macOS, or Linux</li>
+            <li>Hardware Requirements:
+                <ul>
+                    <li>Minimum: 8GB RAM, CPU with AVX2 support</li>
+                    <li>Recommended: 16GB+ RAM, NVIDIA GPU (CUDA support)</li>
+                    <li>Storage: At least 10GB free space</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 id="installation">3. Installation Steps</h2>
+        <ol>
+            <li>Download LM Studio
+                <ul>
+                    <li>Visit <a href="https://lmstudio.ai/" target="_blank">https://lmstudio.ai/</a></li>
+                    <li>Select the version compatible with your system</li>
+                </ul>
+            </li>
+            <li>Installation Process
+                <ul>
+                    <li>Run the downloaded installer</li>
+                    <li>Follow the installation wizard instructions</li>
+                    <li>Administrator privileges may be required for first launch</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 id="setup">4. Setting up text-embedding-nomic-embed-text-v1.5 Model</h2>
+        <ol>
+            <li>Launch LM Studio</li>
+            <li>Download the Model
+                <ul>
+                    <li>Click the model library icon on the left</li>
+                    <li>Search for "text-embedding-nomic-embed-text-v1.5"</li>
+                    <li>Click the download button (approximately 84.11 MB)</li>
+                </ul>
+            </li>
+            <li>Configure Local Server
+                <ul>
+                    <li>Select the downloaded model in the main interface</li>
+                    <li>Click "Settings" button to check configurations:
+                        <ul>
+                            <li>Context Length: 2048</li>
+                            <li>GPU Offload: 12/12 (if GPU available)</li>
+                            <li>Evaluation Batch Size: 512</li>
+                        </ul>
+                    </li>
+                    <li>Ensure "Status: Running" shows green</li>
+                    <li>Server address will be displayed as: http://127.0.0.1:11435</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 id="verification">5. Verifying Setup</h2>
+        <ol>
+            <li>Check Server Status
+                <ul>
+                    <li>Confirm status shows "READY"</li>
+                    <li>Review Developer Logs for any error messages</li>
+                </ul>
+            </li>
+            <li>Test API Connection
+                <ul>
+                    <li>Use provided cURL command for testing</li>
+                    <li>Verify normal response</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 id="troubleshooting">6. Troubleshooting</h2>
+        <dl>
+            <dt>Q: Model won't load?</dt>
+            <dd>A: Check:
+                <ul>
+                    <li>Sufficient system memory</li>
+                    <li>Updated GPU drivers</li>
+                    <li>Adequate disk space</li>
+                </ul>
+            </dd>
+
+            <dt>Q: API connection fails?</dt>
+            <dd>A: Verify:
+                <ul>
+                    <li>Server status is Running</li>
+                    <li>Port 11435 is not in use by other applications</li>
+                    <li>Firewall settings allow connection</li>
+                </ul>
+            </dd>
+        </dl>
+
+        <h2 id="advanced">7. Advanced Configuration</h2>
+        <ul>
+            <li>GPU Memory Management
+                <ul>
+                    <li>Adjust GPU Offload settings for optimal performance</li>
+                    <li>Monitor GPU utilization</li>
+                </ul>
+            </li>
+            <li>Performance Optimization
+                <ul>
+                    <li>Adjust Batch Size to balance speed and memory usage</li>
+                    <li>Use "Keep Model in Memory" option for faster response times</li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f5f5f5;">
+        <p>For more assistance, please contact:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>Customer Service: henrytalk.techpro@gmail.com</li>
+            <li>Official Website: <a href="https://henryhsu0228.github.io/HenryHsu_markmap/Tech_Henry_AI_Media_Analyzer_User_Manu.html">Visit Us</a></li>
+        </ul>
+    </footer>
+</body>
+</html> 
